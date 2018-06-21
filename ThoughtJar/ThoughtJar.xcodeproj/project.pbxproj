@@ -7,64 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7941BA0620DB6AEF001A3DA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941BA0520DB6AEF001A3DA9 /* AppDelegate.swift */; };
-		7941BA0820DB6AEF001A3DA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941BA0720DB6AEF001A3DA9 /* ViewController.swift */; };
-		7941BA0B20DB6AEF001A3DA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA0920DB6AEF001A3DA9 /* Main.storyboard */; };
-		7941BA0D20DB6AF1001A3DA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA0C20DB6AF1001A3DA9 /* Assets.xcassets */; };
-		7941BA1020DB6AF2001A3DA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA0E20DB6AF2001A3DA9 /* LaunchScreen.storyboard */; };
-		7941BA1B20DB6AF2001A3DA9 /* ThoughtJarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941BA1A20DB6AF2001A3DA9 /* ThoughtJarTests.swift */; };
-		7941BA2620DB6AF2001A3DA9 /* ThoughtJarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941BA2520DB6AF2001A3DA9 /* ThoughtJarUITests.swift */; };
+		7941BA4420DB75A6001A3DA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941BA4320DB75A6001A3DA9 /* AppDelegate.swift */; };
+		7941BA4620DB75A6001A3DA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941BA4520DB75A6001A3DA9 /* ViewController.swift */; };
+		7941BA4920DB75A6001A3DA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA4720DB75A6001A3DA9 /* Main.storyboard */; };
+		7941BA4B20DB75A8001A3DA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA4A20DB75A8001A3DA9 /* Assets.xcassets */; };
+		7941BA4E20DB75A8001A3DA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA4C20DB75A8001A3DA9 /* LaunchScreen.storyboard */; };
+		7941BA5920DB75A9001A3DA9 /* ThoughtJarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941BA5820DB75A9001A3DA9 /* ThoughtJarTests.swift */; };
+		7941BA6420DB75A9001A3DA9 /* ThoughtJarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941BA6320DB75A9001A3DA9 /* ThoughtJarUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7941BA1720DB6AF2001A3DA9 /* PBXContainerItemProxy */ = {
+		7941BA5520DB75A9001A3DA9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7941B9FA20DB6AEF001A3DA9 /* Project object */;
+			containerPortal = 7941BA3820DB75A6001A3DA9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7941BA0120DB6AEF001A3DA9;
+			remoteGlobalIDString = 7941BA3F20DB75A6001A3DA9;
 			remoteInfo = ThoughtJar;
 		};
-		7941BA2220DB6AF2001A3DA9 /* PBXContainerItemProxy */ = {
+		7941BA6020DB75A9001A3DA9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7941B9FA20DB6AEF001A3DA9 /* Project object */;
+			containerPortal = 7941BA3820DB75A6001A3DA9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7941BA0120DB6AEF001A3DA9;
+			remoteGlobalIDString = 7941BA3F20DB75A6001A3DA9;
 			remoteInfo = ThoughtJar;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7941BA0220DB6AEF001A3DA9 /* ThoughtJar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThoughtJar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7941BA0520DB6AEF001A3DA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7941BA0720DB6AEF001A3DA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7941BA0A20DB6AEF001A3DA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7941BA0C20DB6AF1001A3DA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7941BA0F20DB6AF2001A3DA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7941BA1120DB6AF2001A3DA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7941BA1620DB6AF2001A3DA9 /* ThoughtJarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThoughtJarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7941BA1A20DB6AF2001A3DA9 /* ThoughtJarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtJarTests.swift; sourceTree = "<group>"; };
-		7941BA1C20DB6AF2001A3DA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7941BA2120DB6AF2001A3DA9 /* ThoughtJarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThoughtJarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7941BA2520DB6AF2001A3DA9 /* ThoughtJarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtJarUITests.swift; sourceTree = "<group>"; };
-		7941BA2720DB6AF2001A3DA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7941BA4020DB75A6001A3DA9 /* ThoughtJar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThoughtJar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7941BA4320DB75A6001A3DA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7941BA4520DB75A6001A3DA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7941BA4820DB75A6001A3DA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7941BA4A20DB75A8001A3DA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7941BA4D20DB75A8001A3DA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7941BA4F20DB75A8001A3DA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7941BA5420DB75A9001A3DA9 /* ThoughtJarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThoughtJarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7941BA5820DB75A9001A3DA9 /* ThoughtJarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtJarTests.swift; sourceTree = "<group>"; };
+		7941BA5A20DB75A9001A3DA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7941BA5F20DB75A9001A3DA9 /* ThoughtJarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThoughtJarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7941BA6320DB75A9001A3DA9 /* ThoughtJarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtJarUITests.swift; sourceTree = "<group>"; };
+		7941BA6520DB75A9001A3DA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7941B9FF20DB6AEF001A3DA9 /* Frameworks */ = {
+		7941BA3D20DB75A6001A3DA9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7941BA1320DB6AF2001A3DA9 /* Frameworks */ = {
+		7941BA5120DB75A9001A3DA9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7941BA1E20DB6AF2001A3DA9 /* Frameworks */ = {
+		7941BA5C20DB75A9001A3DA9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,53 +74,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7941B9F920DB6AEF001A3DA9 = {
+		7941BA3720DB75A6001A3DA9 = {
 			isa = PBXGroup;
 			children = (
-				7941BA0420DB6AEF001A3DA9 /* ThoughtJar */,
-				7941BA1920DB6AF2001A3DA9 /* ThoughtJarTests */,
-				7941BA2420DB6AF2001A3DA9 /* ThoughtJarUITests */,
-				7941BA0320DB6AEF001A3DA9 /* Products */,
+				7941BA4220DB75A6001A3DA9 /* ThoughtJar */,
+				7941BA5720DB75A9001A3DA9 /* ThoughtJarTests */,
+				7941BA6220DB75A9001A3DA9 /* ThoughtJarUITests */,
+				7941BA4120DB75A6001A3DA9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		7941BA0320DB6AEF001A3DA9 /* Products */ = {
+		7941BA4120DB75A6001A3DA9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7941BA0220DB6AEF001A3DA9 /* ThoughtJar.app */,
-				7941BA1620DB6AF2001A3DA9 /* ThoughtJarTests.xctest */,
-				7941BA2120DB6AF2001A3DA9 /* ThoughtJarUITests.xctest */,
+				7941BA4020DB75A6001A3DA9 /* ThoughtJar.app */,
+				7941BA5420DB75A9001A3DA9 /* ThoughtJarTests.xctest */,
+				7941BA5F20DB75A9001A3DA9 /* ThoughtJarUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7941BA0420DB6AEF001A3DA9 /* ThoughtJar */ = {
+		7941BA4220DB75A6001A3DA9 /* ThoughtJar */ = {
 			isa = PBXGroup;
 			children = (
-				7941BA0520DB6AEF001A3DA9 /* AppDelegate.swift */,
-				7941BA0720DB6AEF001A3DA9 /* ViewController.swift */,
-				7941BA0920DB6AEF001A3DA9 /* Main.storyboard */,
-				7941BA0C20DB6AF1001A3DA9 /* Assets.xcassets */,
-				7941BA0E20DB6AF2001A3DA9 /* LaunchScreen.storyboard */,
-				7941BA1120DB6AF2001A3DA9 /* Info.plist */,
+				7941BA4320DB75A6001A3DA9 /* AppDelegate.swift */,
+				7941BA4520DB75A6001A3DA9 /* ViewController.swift */,
+				7941BA4720DB75A6001A3DA9 /* Main.storyboard */,
+				7941BA4A20DB75A8001A3DA9 /* Assets.xcassets */,
+				7941BA4C20DB75A8001A3DA9 /* LaunchScreen.storyboard */,
+				7941BA4F20DB75A8001A3DA9 /* Info.plist */,
 			);
 			path = ThoughtJar;
 			sourceTree = "<group>";
 		};
-		7941BA1920DB6AF2001A3DA9 /* ThoughtJarTests */ = {
+		7941BA5720DB75A9001A3DA9 /* ThoughtJarTests */ = {
 			isa = PBXGroup;
 			children = (
-				7941BA1A20DB6AF2001A3DA9 /* ThoughtJarTests.swift */,
-				7941BA1C20DB6AF2001A3DA9 /* Info.plist */,
+				7941BA5820DB75A9001A3DA9 /* ThoughtJarTests.swift */,
+				7941BA5A20DB75A9001A3DA9 /* Info.plist */,
 			);
 			path = ThoughtJarTests;
 			sourceTree = "<group>";
 		};
-		7941BA2420DB6AF2001A3DA9 /* ThoughtJarUITests */ = {
+		7941BA6220DB75A9001A3DA9 /* ThoughtJarUITests */ = {
 			isa = PBXGroup;
 			children = (
-				7941BA2520DB6AF2001A3DA9 /* ThoughtJarUITests.swift */,
-				7941BA2720DB6AF2001A3DA9 /* Info.plist */,
+				7941BA6320DB75A9001A3DA9 /* ThoughtJarUITests.swift */,
+				7941BA6520DB75A9001A3DA9 /* Info.plist */,
 			);
 			path = ThoughtJarUITests;
 			sourceTree = "<group>";
@@ -128,13 +128,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7941BA0120DB6AEF001A3DA9 /* ThoughtJar */ = {
+		7941BA3F20DB75A6001A3DA9 /* ThoughtJar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7941BA2A20DB6AF2001A3DA9 /* Build configuration list for PBXNativeTarget "ThoughtJar" */;
+			buildConfigurationList = 7941BA6820DB75A9001A3DA9 /* Build configuration list for PBXNativeTarget "ThoughtJar" */;
 			buildPhases = (
-				7941B9FE20DB6AEF001A3DA9 /* Sources */,
-				7941B9FF20DB6AEF001A3DA9 /* Frameworks */,
-				7941BA0020DB6AEF001A3DA9 /* Resources */,
+				7941BA3C20DB75A6001A3DA9 /* Sources */,
+				7941BA3D20DB75A6001A3DA9 /* Frameworks */,
+				7941BA3E20DB75A6001A3DA9 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -142,69 +142,69 @@
 			);
 			name = ThoughtJar;
 			productName = ThoughtJar;
-			productReference = 7941BA0220DB6AEF001A3DA9 /* ThoughtJar.app */;
+			productReference = 7941BA4020DB75A6001A3DA9 /* ThoughtJar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7941BA1520DB6AF2001A3DA9 /* ThoughtJarTests */ = {
+		7941BA5320DB75A9001A3DA9 /* ThoughtJarTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7941BA2D20DB6AF2001A3DA9 /* Build configuration list for PBXNativeTarget "ThoughtJarTests" */;
+			buildConfigurationList = 7941BA6B20DB75A9001A3DA9 /* Build configuration list for PBXNativeTarget "ThoughtJarTests" */;
 			buildPhases = (
-				7941BA1220DB6AF2001A3DA9 /* Sources */,
-				7941BA1320DB6AF2001A3DA9 /* Frameworks */,
-				7941BA1420DB6AF2001A3DA9 /* Resources */,
+				7941BA5020DB75A9001A3DA9 /* Sources */,
+				7941BA5120DB75A9001A3DA9 /* Frameworks */,
+				7941BA5220DB75A9001A3DA9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7941BA1820DB6AF2001A3DA9 /* PBXTargetDependency */,
+				7941BA5620DB75A9001A3DA9 /* PBXTargetDependency */,
 			);
 			name = ThoughtJarTests;
 			productName = ThoughtJarTests;
-			productReference = 7941BA1620DB6AF2001A3DA9 /* ThoughtJarTests.xctest */;
+			productReference = 7941BA5420DB75A9001A3DA9 /* ThoughtJarTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7941BA2020DB6AF2001A3DA9 /* ThoughtJarUITests */ = {
+		7941BA5E20DB75A9001A3DA9 /* ThoughtJarUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7941BA3020DB6AF2001A3DA9 /* Build configuration list for PBXNativeTarget "ThoughtJarUITests" */;
+			buildConfigurationList = 7941BA6E20DB75A9001A3DA9 /* Build configuration list for PBXNativeTarget "ThoughtJarUITests" */;
 			buildPhases = (
-				7941BA1D20DB6AF2001A3DA9 /* Sources */,
-				7941BA1E20DB6AF2001A3DA9 /* Frameworks */,
-				7941BA1F20DB6AF2001A3DA9 /* Resources */,
+				7941BA5B20DB75A9001A3DA9 /* Sources */,
+				7941BA5C20DB75A9001A3DA9 /* Frameworks */,
+				7941BA5D20DB75A9001A3DA9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7941BA2320DB6AF2001A3DA9 /* PBXTargetDependency */,
+				7941BA6120DB75A9001A3DA9 /* PBXTargetDependency */,
 			);
 			name = ThoughtJarUITests;
 			productName = ThoughtJarUITests;
-			productReference = 7941BA2120DB6AF2001A3DA9 /* ThoughtJarUITests.xctest */;
+			productReference = 7941BA5F20DB75A9001A3DA9 /* ThoughtJarUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		7941B9FA20DB6AEF001A3DA9 /* Project object */ = {
+		7941BA3820DB75A6001A3DA9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Thought Jar";
 				TargetAttributes = {
-					7941BA0120DB6AEF001A3DA9 = {
+					7941BA3F20DB75A6001A3DA9 = {
 						CreatedOnToolsVersion = 9.4;
 					};
-					7941BA1520DB6AF2001A3DA9 = {
+					7941BA5320DB75A9001A3DA9 = {
 						CreatedOnToolsVersion = 9.4;
-						TestTargetID = 7941BA0120DB6AEF001A3DA9;
+						TestTargetID = 7941BA3F20DB75A6001A3DA9;
 					};
-					7941BA2020DB6AF2001A3DA9 = {
+					7941BA5E20DB75A9001A3DA9 = {
 						CreatedOnToolsVersion = 9.4;
-						TestTargetID = 7941BA0120DB6AEF001A3DA9;
+						TestTargetID = 7941BA3F20DB75A6001A3DA9;
 					};
 				};
 			};
-			buildConfigurationList = 7941B9FD20DB6AEF001A3DA9 /* Build configuration list for PBXProject "ThoughtJar" */;
+			buildConfigurationList = 7941BA3B20DB75A6001A3DA9 /* Build configuration list for PBXProject "ThoughtJar" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -212,37 +212,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 7941B9F920DB6AEF001A3DA9;
-			productRefGroup = 7941BA0320DB6AEF001A3DA9 /* Products */;
+			mainGroup = 7941BA3720DB75A6001A3DA9;
+			productRefGroup = 7941BA4120DB75A6001A3DA9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7941BA0120DB6AEF001A3DA9 /* ThoughtJar */,
-				7941BA1520DB6AF2001A3DA9 /* ThoughtJarTests */,
-				7941BA2020DB6AF2001A3DA9 /* ThoughtJarUITests */,
+				7941BA3F20DB75A6001A3DA9 /* ThoughtJar */,
+				7941BA5320DB75A9001A3DA9 /* ThoughtJarTests */,
+				7941BA5E20DB75A9001A3DA9 /* ThoughtJarUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7941BA0020DB6AEF001A3DA9 /* Resources */ = {
+		7941BA3E20DB75A6001A3DA9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7941BA1020DB6AF2001A3DA9 /* LaunchScreen.storyboard in Resources */,
-				7941BA0D20DB6AF1001A3DA9 /* Assets.xcassets in Resources */,
-				7941BA0B20DB6AEF001A3DA9 /* Main.storyboard in Resources */,
+				7941BA4E20DB75A8001A3DA9 /* LaunchScreen.storyboard in Resources */,
+				7941BA4B20DB75A8001A3DA9 /* Assets.xcassets in Resources */,
+				7941BA4920DB75A6001A3DA9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7941BA1420DB6AF2001A3DA9 /* Resources */ = {
+		7941BA5220DB75A9001A3DA9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7941BA1F20DB6AF2001A3DA9 /* Resources */ = {
+		7941BA5D20DB75A9001A3DA9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -252,59 +252,59 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7941B9FE20DB6AEF001A3DA9 /* Sources */ = {
+		7941BA3C20DB75A6001A3DA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7941BA0820DB6AEF001A3DA9 /* ViewController.swift in Sources */,
-				7941BA0620DB6AEF001A3DA9 /* AppDelegate.swift in Sources */,
+				7941BA4620DB75A6001A3DA9 /* ViewController.swift in Sources */,
+				7941BA4420DB75A6001A3DA9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7941BA1220DB6AF2001A3DA9 /* Sources */ = {
+		7941BA5020DB75A9001A3DA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7941BA1B20DB6AF2001A3DA9 /* ThoughtJarTests.swift in Sources */,
+				7941BA5920DB75A9001A3DA9 /* ThoughtJarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7941BA1D20DB6AF2001A3DA9 /* Sources */ = {
+		7941BA5B20DB75A9001A3DA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7941BA2620DB6AF2001A3DA9 /* ThoughtJarUITests.swift in Sources */,
+				7941BA6420DB75A9001A3DA9 /* ThoughtJarUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7941BA1820DB6AF2001A3DA9 /* PBXTargetDependency */ = {
+		7941BA5620DB75A9001A3DA9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7941BA0120DB6AEF001A3DA9 /* ThoughtJar */;
-			targetProxy = 7941BA1720DB6AF2001A3DA9 /* PBXContainerItemProxy */;
+			target = 7941BA3F20DB75A6001A3DA9 /* ThoughtJar */;
+			targetProxy = 7941BA5520DB75A9001A3DA9 /* PBXContainerItemProxy */;
 		};
-		7941BA2320DB6AF2001A3DA9 /* PBXTargetDependency */ = {
+		7941BA6120DB75A9001A3DA9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7941BA0120DB6AEF001A3DA9 /* ThoughtJar */;
-			targetProxy = 7941BA2220DB6AF2001A3DA9 /* PBXContainerItemProxy */;
+			target = 7941BA3F20DB75A6001A3DA9 /* ThoughtJar */;
+			targetProxy = 7941BA6020DB75A9001A3DA9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7941BA0920DB6AEF001A3DA9 /* Main.storyboard */ = {
+		7941BA4720DB75A6001A3DA9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7941BA0A20DB6AEF001A3DA9 /* Base */,
+				7941BA4820DB75A6001A3DA9 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		7941BA0E20DB6AF2001A3DA9 /* LaunchScreen.storyboard */ = {
+		7941BA4C20DB75A8001A3DA9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7941BA0F20DB6AF2001A3DA9 /* Base */,
+				7941BA4D20DB75A8001A3DA9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -312,7 +312,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7941BA2820DB6AF2001A3DA9 /* Debug */ = {
+		7941BA6620DB75A9001A3DA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -372,7 +372,7 @@
 			};
 			name = Debug;
 		};
-		7941BA2920DB6AF2001A3DA9 /* Release */ = {
+		7941BA6720DB75A9001A3DA9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -426,7 +426,7 @@
 			};
 			name = Release;
 		};
-		7941BA2B20DB6AF2001A3DA9 /* Debug */ = {
+		7941BA6920DB75A9001A3DA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -444,7 +444,7 @@
 			};
 			name = Debug;
 		};
-		7941BA2C20DB6AF2001A3DA9 /* Release */ = {
+		7941BA6A20DB75A9001A3DA9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -462,7 +462,7 @@
 			};
 			name = Release;
 		};
-		7941BA2E20DB6AF2001A3DA9 /* Debug */ = {
+		7941BA6C20DB75A9001A3DA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -483,7 +483,7 @@
 			};
 			name = Debug;
 		};
-		7941BA2F20DB6AF2001A3DA9 /* Release */ = {
+		7941BA6D20DB75A9001A3DA9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -504,7 +504,7 @@
 			};
 			name = Release;
 		};
-		7941BA3120DB6AF2001A3DA9 /* Debug */ = {
+		7941BA6F20DB75A9001A3DA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -524,7 +524,7 @@
 			};
 			name = Debug;
 		};
-		7941BA3220DB6AF2001A3DA9 /* Release */ = {
+		7941BA7020DB75A9001A3DA9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -547,43 +547,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7941B9FD20DB6AEF001A3DA9 /* Build configuration list for PBXProject "ThoughtJar" */ = {
+		7941BA3B20DB75A6001A3DA9 /* Build configuration list for PBXProject "ThoughtJar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7941BA2820DB6AF2001A3DA9 /* Debug */,
-				7941BA2920DB6AF2001A3DA9 /* Release */,
+				7941BA6620DB75A9001A3DA9 /* Debug */,
+				7941BA6720DB75A9001A3DA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7941BA2A20DB6AF2001A3DA9 /* Build configuration list for PBXNativeTarget "ThoughtJar" */ = {
+		7941BA6820DB75A9001A3DA9 /* Build configuration list for PBXNativeTarget "ThoughtJar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7941BA2B20DB6AF2001A3DA9 /* Debug */,
-				7941BA2C20DB6AF2001A3DA9 /* Release */,
+				7941BA6920DB75A9001A3DA9 /* Debug */,
+				7941BA6A20DB75A9001A3DA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7941BA2D20DB6AF2001A3DA9 /* Build configuration list for PBXNativeTarget "ThoughtJarTests" */ = {
+		7941BA6B20DB75A9001A3DA9 /* Build configuration list for PBXNativeTarget "ThoughtJarTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7941BA2E20DB6AF2001A3DA9 /* Debug */,
-				7941BA2F20DB6AF2001A3DA9 /* Release */,
+				7941BA6C20DB75A9001A3DA9 /* Debug */,
+				7941BA6D20DB75A9001A3DA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7941BA3020DB6AF2001A3DA9 /* Build configuration list for PBXNativeTarget "ThoughtJarUITests" */ = {
+		7941BA6E20DB75A9001A3DA9 /* Build configuration list for PBXNativeTarget "ThoughtJarUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7941BA3120DB6AF2001A3DA9 /* Debug */,
-				7941BA3220DB6AF2001A3DA9 /* Release */,
+				7941BA6F20DB75A9001A3DA9 /* Debug */,
+				7941BA7020DB75A9001A3DA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 7941B9FA20DB6AEF001A3DA9 /* Project object */;
+	rootObject = 7941BA3820DB75A6001A3DA9 /* Project object */;
 }
