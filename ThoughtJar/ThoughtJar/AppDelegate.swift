@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -28,7 +29,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         guard let authentication = user.authentication else {return}
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
         
-        print("signing in")
+        let parameters: Parameters = ["id_token": String(authentication.idToken),
+                                      "isMobile": "1"]
+        Alamofire.request("https://api.thoughtjar.net/authenticate", method: .post, parameters: parameters).responseJSON {response in
+            
+            if let result = response.result.value {
+                let JSON = result as! NSDictionary
+                UserDefaults.standard.set((JSON["access-token"])!, forKey: "access-token") //set access-token
+                UserDefaults.standard.set((JSON["email"])!, forKey: "email")  //email
+                UserDefaults.standard.set((JSON["name"])!, forKey: "name") //name
+            }
+            self.window?.rootViewController!.performSegue(withIdentifier: "LoginToJarList", sender: nil)
+        }
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
