@@ -31,6 +31,25 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NHaasGroteskDSPro-15UltTh.ttf</string>
+		<string>NHaasGroteskDSPro-16UltThIt.ttf</string>
+		<string>NHaasGroteskDSPro-25Th.ttf</string>
+		<string>NHaasGroteskDSPro-26ThIt.ttf</string>
+		<string>NHaasGroteskDSPro-35XLt.ttf</string>
+		<string>NHaasGroteskDSPro-36XLtIt.ttf</string>
+		<string>NHaasGroteskDSPro-45Lt.ttf</string>
+		<string>NHaasGroteskDSPro-46LtIt.ttf</string>
+		<string>NHaasGroteskDSPro-55Rg.ttf</string>
+		<string>NHaasGroteskDSPro-56It.ttf</string>
+		<string>NHaasGroteskDSPro-65Md.ttf</string>
+		<string>NHaasGroteskDSPro-66MdIt.ttf</string>
+		<string>NHaasGroteskDSPro-75Bd.ttf</string>
+		<string>NHaasGroteskDSPro-76BdIt.ttf</string>
+		<string>NHaasGroteskDSPro-95Blk.ttf</string>
+		<string>NHaasGroteskDSPro-96BlkIt.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -39,6 +58,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -52,5 +73,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

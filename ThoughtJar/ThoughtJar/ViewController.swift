@@ -16,11 +16,12 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let googleLoginButton = GIDSignInButton()
-        googleLoginButton.frame = CGRect(x: 10, y: view.frame.height - 60, width: view.frame.width - 20, height: 50)
+        googleLoginButton.frame = CGRect(x: (view.frame.width/2)-50, y: view.frame.height - 220, width: 135, height: 40)
+        googleLoginButton.center.x = self.view.center.x
         view.addSubview(googleLoginButton)
         
         GIDSignIn.sharedInstance().uiDelegate = self
-        GIDSignIn.sharedInstance().signIn()
+        //GIDSignIn.sharedInstance().signIn()
     }
 
     override func didReceiveMemoryWarning() {

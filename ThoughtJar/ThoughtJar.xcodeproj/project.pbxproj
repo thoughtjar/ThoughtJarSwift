@@ -15,6 +15,22 @@
 		7941BA5920DB75A9001A3DA9 /* ThoughtJarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941BA5820DB75A9001A3DA9 /* ThoughtJarTests.swift */; };
 		7941BA6420DB75A9001A3DA9 /* ThoughtJarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941BA6320DB75A9001A3DA9 /* ThoughtJarUITests.swift */; };
 		7941BA7220DB85F8001A3DA9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA7120DB85F7001A3DA9 /* GoogleService-Info.plist */; };
+		7941BAA620DC1211001A3DA9 /* NHaasGroteskDSPro-15UltTh.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA9B20DC1208001A3DA9 /* NHaasGroteskDSPro-15UltTh.ttf */; };
+		7941BAA720DC1213001A3DA9 /* NHaasGroteskDSPro-16UltThIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA9920DC1208001A3DA9 /* NHaasGroteskDSPro-16UltThIt.ttf */; };
+		7941BAA820DC1216001A3DA9 /* NHaasGroteskDSPro-25Th.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA9A20DC1208001A3DA9 /* NHaasGroteskDSPro-25Th.ttf */; };
+		7941BAA920DC1218001A3DA9 /* NHaasGroteskDSPro-26ThIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA9F20DC1209001A3DA9 /* NHaasGroteskDSPro-26ThIt.ttf */; };
+		7941BAAA20DC121B001A3DA9 /* NHaasGroteskDSPro-35XLt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BAA320DC120A001A3DA9 /* NHaasGroteskDSPro-35XLt.ttf */; };
+		7941BAAB20DC121D001A3DA9 /* NHaasGroteskDSPro-36XLtIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BAA220DC1209001A3DA9 /* NHaasGroteskDSPro-36XLtIt.ttf */; };
+		7941BAAC20DC1220001A3DA9 /* NHaasGroteskDSPro-45Lt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BAA020DC1209001A3DA9 /* NHaasGroteskDSPro-45Lt.ttf */; };
+		7941BAAD20DC1222001A3DA9 /* NHaasGroteskDSPro-46LtIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA9620DC1207001A3DA9 /* NHaasGroteskDSPro-46LtIt.ttf */; };
+		7941BAAE20DC1225001A3DA9 /* NHaasGroteskDSPro-55Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA9C20DC1208001A3DA9 /* NHaasGroteskDSPro-55Rg.ttf */; };
+		7941BAAF20DC1227001A3DA9 /* NHaasGroteskDSPro-56It.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA9E20DC1209001A3DA9 /* NHaasGroteskDSPro-56It.ttf */; };
+		7941BAB020DC1229001A3DA9 /* NHaasGroteskDSPro-65Md.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA9720DC1207001A3DA9 /* NHaasGroteskDSPro-65Md.ttf */; };
+		7941BAB120DC122C001A3DA9 /* NHaasGroteskDSPro-66MdIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA9820DC1207001A3DA9 /* NHaasGroteskDSPro-66MdIt.ttf */; };
+		7941BAB220DC122E001A3DA9 /* NHaasGroteskDSPro-75Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BAA520DC120B001A3DA9 /* NHaasGroteskDSPro-75Bd.ttf */; };
+		7941BAB320DC1231001A3DA9 /* NHaasGroteskDSPro-76BdIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA9D20DC1208001A3DA9 /* NHaasGroteskDSPro-76BdIt.ttf */; };
+		7941BAB420DC1233001A3DA9 /* NHaasGroteskDSPro-95Blk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BAA120DC1209001A3DA9 /* NHaasGroteskDSPro-95Blk.ttf */; };
+		7941BAB520DC1235001A3DA9 /* NHaasGroteskDSPro-96BlkIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BAA420DC120A001A3DA9 /* NHaasGroteskDSPro-96BlkIt.ttf */; };
 		813EC0878845D669B5381B35 /* Pods_ThoughtJar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D41EB789EF040CE324089D9 /* Pods_ThoughtJar.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +68,22 @@
 		7941BA6320DB75A9001A3DA9 /* ThoughtJarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtJarUITests.swift; sourceTree = "<group>"; };
 		7941BA6520DB75A9001A3DA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7941BA7120DB85F7001A3DA9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7941BA9620DC1207001A3DA9 /* NHaasGroteskDSPro-46LtIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-46LtIt.ttf"; sourceTree = "<group>"; };
+		7941BA9720DC1207001A3DA9 /* NHaasGroteskDSPro-65Md.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-65Md.ttf"; sourceTree = "<group>"; };
+		7941BA9820DC1207001A3DA9 /* NHaasGroteskDSPro-66MdIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-66MdIt.ttf"; sourceTree = "<group>"; };
+		7941BA9920DC1208001A3DA9 /* NHaasGroteskDSPro-16UltThIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-16UltThIt.ttf"; sourceTree = "<group>"; };
+		7941BA9A20DC1208001A3DA9 /* NHaasGroteskDSPro-25Th.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-25Th.ttf"; sourceTree = "<group>"; };
+		7941BA9B20DC1208001A3DA9 /* NHaasGroteskDSPro-15UltTh.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-15UltTh.ttf"; sourceTree = "<group>"; };
+		7941BA9C20DC1208001A3DA9 /* NHaasGroteskDSPro-55Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-55Rg.ttf"; sourceTree = "<group>"; };
+		7941BA9D20DC1208001A3DA9 /* NHaasGroteskDSPro-76BdIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-76BdIt.ttf"; sourceTree = "<group>"; };
+		7941BA9E20DC1209001A3DA9 /* NHaasGroteskDSPro-56It.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-56It.ttf"; sourceTree = "<group>"; };
+		7941BA9F20DC1209001A3DA9 /* NHaasGroteskDSPro-26ThIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-26ThIt.ttf"; sourceTree = "<group>"; };
+		7941BAA020DC1209001A3DA9 /* NHaasGroteskDSPro-45Lt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-45Lt.ttf"; sourceTree = "<group>"; };
+		7941BAA120DC1209001A3DA9 /* NHaasGroteskDSPro-95Blk.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-95Blk.ttf"; sourceTree = "<group>"; };
+		7941BAA220DC1209001A3DA9 /* NHaasGroteskDSPro-36XLtIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-36XLtIt.ttf"; sourceTree = "<group>"; };
+		7941BAA320DC120A001A3DA9 /* NHaasGroteskDSPro-35XLt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-35XLt.ttf"; sourceTree = "<group>"; };
+		7941BAA420DC120A001A3DA9 /* NHaasGroteskDSPro-96BlkIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-96BlkIt.ttf"; sourceTree = "<group>"; };
+		7941BAA520DC120B001A3DA9 /* NHaasGroteskDSPro-75Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-75Bd.ttf"; sourceTree = "<group>"; };
 		9D41EB789EF040CE324089D9 /* Pods_ThoughtJar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThoughtJar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -114,6 +146,7 @@
 		7941BA4220DB75A6001A3DA9 /* ThoughtJar */ = {
 			isa = PBXGroup;
 			children = (
+				7941BA9520DC11CC001A3DA9 /* Fonts */,
 				7941BA4320DB75A6001A3DA9 /* AppDelegate.swift */,
 				7941BA4520DB75A6001A3DA9 /* ViewController.swift */,
 				7941BA4720DB75A6001A3DA9 /* Main.storyboard */,
@@ -141,6 +174,29 @@
 				7941BA6520DB75A9001A3DA9 /* Info.plist */,
 			);
 			path = ThoughtJarUITests;
+			sourceTree = "<group>";
+		};
+		7941BA9520DC11CC001A3DA9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7941BA9B20DC1208001A3DA9 /* NHaasGroteskDSPro-15UltTh.ttf */,
+				7941BA9920DC1208001A3DA9 /* NHaasGroteskDSPro-16UltThIt.ttf */,
+				7941BA9A20DC1208001A3DA9 /* NHaasGroteskDSPro-25Th.ttf */,
+				7941BA9F20DC1209001A3DA9 /* NHaasGroteskDSPro-26ThIt.ttf */,
+				7941BAA320DC120A001A3DA9 /* NHaasGroteskDSPro-35XLt.ttf */,
+				7941BAA220DC1209001A3DA9 /* NHaasGroteskDSPro-36XLtIt.ttf */,
+				7941BAA020DC1209001A3DA9 /* NHaasGroteskDSPro-45Lt.ttf */,
+				7941BA9620DC1207001A3DA9 /* NHaasGroteskDSPro-46LtIt.ttf */,
+				7941BA9C20DC1208001A3DA9 /* NHaasGroteskDSPro-55Rg.ttf */,
+				7941BA9E20DC1209001A3DA9 /* NHaasGroteskDSPro-56It.ttf */,
+				7941BA9720DC1207001A3DA9 /* NHaasGroteskDSPro-65Md.ttf */,
+				7941BA9820DC1207001A3DA9 /* NHaasGroteskDSPro-66MdIt.ttf */,
+				7941BAA520DC120B001A3DA9 /* NHaasGroteskDSPro-75Bd.ttf */,
+				7941BA9D20DC1208001A3DA9 /* NHaasGroteskDSPro-76BdIt.ttf */,
+				7941BAA120DC1209001A3DA9 /* NHaasGroteskDSPro-95Blk.ttf */,
+				7941BAA420DC120A001A3DA9 /* NHaasGroteskDSPro-96BlkIt.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		8C472DC7E87FB751824AF9B4 /* Pods */ = {
@@ -259,10 +315,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7941BAB420DC1233001A3DA9 /* NHaasGroteskDSPro-95Blk.ttf in Resources */,
+				7941BAB020DC1229001A3DA9 /* NHaasGroteskDSPro-65Md.ttf in Resources */,
+				7941BAB120DC122C001A3DA9 /* NHaasGroteskDSPro-66MdIt.ttf in Resources */,
+				7941BAA920DC1218001A3DA9 /* NHaasGroteskDSPro-26ThIt.ttf in Resources */,
+				7941BAA820DC1216001A3DA9 /* NHaasGroteskDSPro-25Th.ttf in Resources */,
+				7941BAAE20DC1225001A3DA9 /* NHaasGroteskDSPro-55Rg.ttf in Resources */,
+				7941BAAB20DC121D001A3DA9 /* NHaasGroteskDSPro-36XLtIt.ttf in Resources */,
+				7941BAB220DC122E001A3DA9 /* NHaasGroteskDSPro-75Bd.ttf in Resources */,
 				7941BA4E20DB75A8001A3DA9 /* LaunchScreen.storyboard in Resources */,
+				7941BAAA20DC121B001A3DA9 /* NHaasGroteskDSPro-35XLt.ttf in Resources */,
 				7941BA7220DB85F8001A3DA9 /* GoogleService-Info.plist in Resources */,
+				7941BAAD20DC1222001A3DA9 /* NHaasGroteskDSPro-46LtIt.ttf in Resources */,
+				7941BAAC20DC1220001A3DA9 /* NHaasGroteskDSPro-45Lt.ttf in Resources */,
+				7941BAAF20DC1227001A3DA9 /* NHaasGroteskDSPro-56It.ttf in Resources */,
 				7941BA4B20DB75A8001A3DA9 /* Assets.xcassets in Resources */,
+				7941BAA720DC1213001A3DA9 /* NHaasGroteskDSPro-16UltThIt.ttf in Resources */,
+				7941BAA620DC1211001A3DA9 /* NHaasGroteskDSPro-15UltTh.ttf in Resources */,
+				7941BAB520DC1235001A3DA9 /* NHaasGroteskDSPro-96BlkIt.ttf in Resources */,
 				7941BA4920DB75A6001A3DA9 /* Main.storyboard in Resources */,
+				7941BAB320DC1231001A3DA9 /* NHaasGroteskDSPro-76BdIt.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
