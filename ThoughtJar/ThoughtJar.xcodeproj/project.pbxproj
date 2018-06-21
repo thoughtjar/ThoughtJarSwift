@@ -14,6 +14,7 @@
 		7941BA4E20DB75A8001A3DA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA4C20DB75A8001A3DA9 /* LaunchScreen.storyboard */; };
 		7941BA5920DB75A9001A3DA9 /* ThoughtJarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941BA5820DB75A9001A3DA9 /* ThoughtJarTests.swift */; };
 		7941BA6420DB75A9001A3DA9 /* ThoughtJarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941BA6320DB75A9001A3DA9 /* ThoughtJarUITests.swift */; };
+		813EC0878845D669B5381B35 /* Pods_ThoughtJar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D41EB789EF040CE324089D9 /* Pods_ThoughtJar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22B3048F7243BD418173977A /* Pods-ThoughtJar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThoughtJar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThoughtJar/Pods-ThoughtJar.debug.xcconfig"; sourceTree = "<group>"; };
+		5ABFC5D3FC72CB88E359299A /* Pods-ThoughtJar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThoughtJar.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThoughtJar/Pods-ThoughtJar.release.xcconfig"; sourceTree = "<group>"; };
 		7941BA4020DB75A6001A3DA9 /* ThoughtJar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThoughtJar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7941BA4320DB75A6001A3DA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7941BA4520DB75A6001A3DA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		7941BA5F20DB75A9001A3DA9 /* ThoughtJarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThoughtJarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7941BA6320DB75A9001A3DA9 /* ThoughtJarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtJarUITests.swift; sourceTree = "<group>"; };
 		7941BA6520DB75A9001A3DA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D41EB789EF040CE324089D9 /* Pods_ThoughtJar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThoughtJar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				813EC0878845D669B5381B35 /* Pods_ThoughtJar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CB7F079B28C9F19F2DBA1DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D41EB789EF040CE324089D9 /* Pods_ThoughtJar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7941BA3720DB75A6001A3DA9 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +94,8 @@
 				7941BA5720DB75A9001A3DA9 /* ThoughtJarTests */,
 				7941BA6220DB75A9001A3DA9 /* ThoughtJarUITests */,
 				7941BA4120DB75A6001A3DA9 /* Products */,
+				8C472DC7E87FB751824AF9B4 /* Pods */,
+				5CB7F079B28C9F19F2DBA1DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +140,15 @@
 			path = ThoughtJarUITests;
 			sourceTree = "<group>";
 		};
+		8C472DC7E87FB751824AF9B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22B3048F7243BD418173977A /* Pods-ThoughtJar.debug.xcconfig */,
+				5ABFC5D3FC72CB88E359299A /* Pods-ThoughtJar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7941BA6820DB75A9001A3DA9 /* Build configuration list for PBXNativeTarget "ThoughtJar" */;
 			buildPhases = (
+				D58028E32E5185ECF78B3726 /* [CP] Check Pods Manifest.lock */,
 				7941BA3C20DB75A6001A3DA9 /* Sources */,
 				7941BA3D20DB75A6001A3DA9 /* Frameworks */,
 				7941BA3E20DB75A6001A3DA9 /* Resources */,
+				4C2C80CC9ABD6369A9DCB129 /* [CP] Embed Pods Frameworks */,
+				79D7001237569824592409AA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +277,69 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C2C80CC9ABD6369A9DCB129 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ThoughtJar/Pods-ThoughtJar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThoughtJar/Pods-ThoughtJar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79D7001237569824592409AA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ThoughtJar/Pods-ThoughtJar-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThoughtJar/Pods-ThoughtJar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D58028E32E5185ECF78B3726 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ThoughtJar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7941BA3C20DB75A6001A3DA9 /* Sources */ = {
@@ -428,6 +518,7 @@
 		};
 		7941BA6920DB75A9001A3DA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22B3048F7243BD418173977A /* Pods-ThoughtJar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +537,7 @@
 		};
 		7941BA6A20DB75A9001A3DA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5ABFC5D3FC72CB88E359299A /* Pods-ThoughtJar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
