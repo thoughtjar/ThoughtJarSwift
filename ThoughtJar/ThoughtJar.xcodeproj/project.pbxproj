@@ -14,6 +14,7 @@
 		7941BA4E20DB75A8001A3DA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA4C20DB75A8001A3DA9 /* LaunchScreen.storyboard */; };
 		7941BA5920DB75A9001A3DA9 /* ThoughtJarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941BA5820DB75A9001A3DA9 /* ThoughtJarTests.swift */; };
 		7941BA6420DB75A9001A3DA9 /* ThoughtJarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941BA6320DB75A9001A3DA9 /* ThoughtJarUITests.swift */; };
+		7941BA7220DB85F8001A3DA9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA7120DB85F7001A3DA9 /* GoogleService-Info.plist */; };
 		813EC0878845D669B5381B35 /* Pods_ThoughtJar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D41EB789EF040CE324089D9 /* Pods_ThoughtJar.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		7941BA5F20DB75A9001A3DA9 /* ThoughtJarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThoughtJarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7941BA6320DB75A9001A3DA9 /* ThoughtJarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtJarUITests.swift; sourceTree = "<group>"; };
 		7941BA6520DB75A9001A3DA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7941BA7120DB85F7001A3DA9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9D41EB789EF040CE324089D9 /* Pods_ThoughtJar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThoughtJar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 				7941BA4A20DB75A8001A3DA9 /* Assets.xcassets */,
 				7941BA4C20DB75A8001A3DA9 /* LaunchScreen.storyboard */,
 				7941BA4F20DB75A8001A3DA9 /* Info.plist */,
+				7941BA7120DB85F7001A3DA9 /* GoogleService-Info.plist */,
 			);
 			path = ThoughtJar;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7941BA4E20DB75A8001A3DA9 /* LaunchScreen.storyboard in Resources */,
+				7941BA7220DB85F8001A3DA9 /* GoogleService-Info.plist in Resources */,
 				7941BA4B20DB75A8001A3DA9 /* Assets.xcassets in Resources */,
 				7941BA4920DB75A6001A3DA9 /* Main.storyboard in Resources */,
 			);
