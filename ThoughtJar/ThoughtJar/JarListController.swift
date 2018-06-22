@@ -17,7 +17,7 @@ struct jarData {
     let jarMoneyAmt: String!
 }
 
-class JarListController: UIViewController {
+class JarListController: UIViewController, UIViewControllerTransitioningDelegate {
 
     let JarCollectionViewCellId: String = "JarCollectionViewCell"
     @IBOutlet weak var JarListCollectionView: UICollectionView!
@@ -26,7 +26,7 @@ class JarListController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let nibCell = UINib(nibName: JarCollectionViewCellId, bundle: nil)
         JarListCollectionView.register(nibCell, forCellWithReuseIdentifier: JarCollectionViewCellId)
         
@@ -115,6 +115,10 @@ extension JarListController: UICollectionViewDelegate, UICollectionViewDataSourc
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize.init(width: UIScreen.main.bounds.width - 20, height: 112)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.item)
     }
     
 }
