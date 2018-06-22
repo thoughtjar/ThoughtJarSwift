@@ -31,7 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         let parameters: Parameters = ["id_token": String(authentication.idToken),
                                       "isMobile": "1"]
-        Alamofire.request("https://api.thoughtjar.net/authenticate", method: .post, parameters: parameters).responseJSON {response in
+        //let url = "https://api.thoughtjar.net/authenticate"
+        //let url = "http://localhost:5000/authenticate"
+        Alamofire.request("http://localhost:5000/authenticate", method: .post, parameters: parameters).responseJSON {response in
             
             if let result = response.result.value {
                 let JSON = result as! NSDictionary

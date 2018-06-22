@@ -35,7 +35,9 @@ class JarListController: UIViewController, UIViewControllerTransitioningDelegate
         ]
         
         let parameters: Parameters = ["access-token": UserDefaults.standard.string(forKey: "access-token")]
-        Alamofire.request("https://api.thoughtjar.net/fillJars", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON{ response in
+        //let url = "https://api.thoughtjar.net/fillJars"
+        //let url = "http://localhost:5000/fillJars"
+        Alamofire.request("http://localhost:5000/fillJars", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON{ response in
             if let result = response.result.value {
                 
                 let JSON = (result as! NSDictionary)
@@ -46,7 +48,7 @@ class JarListController: UIViewController, UIViewControllerTransitioningDelegate
                 for i in 0...(jars.count-1){
                     let jar = jars[i] as! NSDictionary
                     //print(jar["title"] as! String)
-                    self.jarDataList.append(jarData(jarTitle: (jar["title"] as! String), jarDescription: jar["description"] as! String, jarCreator: "Dave", jarNumQuestions: "3", jarMoneyAmt: "$1.50"))
+                    self.jarDataList.append(jarData(jarTitle: (jar["title"] as! String), jarDescription: jar["description"] as! String, jarCreator: "Dave", jarNumQuestions: "0/20", jarMoneyAmt: "$ 10.50"))
                 }
                 self.JarListCollectionView.reloadData()
             }
@@ -114,7 +116,7 @@ extension JarListController: UICollectionViewDelegate, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.init(width: UIScreen.main.bounds.width - 20, height: 105)
+        return CGSize.init(width: UIScreen.main.bounds.width - 30, height: 105)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
