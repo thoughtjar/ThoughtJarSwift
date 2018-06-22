@@ -114,7 +114,7 @@ extension JarListController: UICollectionViewDelegate, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.init(width: UIScreen.main.bounds.width - 20, height: 112)
+        return CGSize.init(width: UIScreen.main.bounds.width - 20, height: 105)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
