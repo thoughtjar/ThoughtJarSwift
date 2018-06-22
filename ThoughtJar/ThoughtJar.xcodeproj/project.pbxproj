@@ -31,10 +31,11 @@
 		7941BAB320DC1231001A3DA9 /* NHaasGroteskDSPro-76BdIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA9D20DC1208001A3DA9 /* NHaasGroteskDSPro-76BdIt.ttf */; };
 		7941BAB420DC1233001A3DA9 /* NHaasGroteskDSPro-95Blk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BAA120DC1209001A3DA9 /* NHaasGroteskDSPro-95Blk.ttf */; };
 		7941BAB520DC1235001A3DA9 /* NHaasGroteskDSPro-96BlkIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BAA420DC120A001A3DA9 /* NHaasGroteskDSPro-96BlkIt.ttf */; };
+		795DE67A20DD78F000F8BE88 /* FillJarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DE67920DD78F000F8BE88 /* FillJarController.swift */; };
+		795DE68720DD9D7400F8BE88 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DE68620DD9D7400F8BE88 /* ProfileController.swift */; };
 		79E44E0420DC43CC006DF5CF /* JarListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44E0320DC43CC006DF5CF /* JarListController.swift */; };
 		79E44E0820DC455D006DF5CF /* JarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44E0620DC455D006DF5CF /* JarCollectionViewCell.swift */; };
 		79E44E0920DC455D006DF5CF /* JarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79E44E0720DC455D006DF5CF /* JarCollectionViewCell.xib */; };
-		79E44E0D20DC821A006DF5CF /* AnimationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44E0C20DC821A006DF5CF /* AnimationUtility.swift */; };
 		813EC0878845D669B5381B35 /* Pods_ThoughtJar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D41EB789EF040CE324089D9 /* Pods_ThoughtJar.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,10 +89,11 @@
 		7941BAA320DC120A001A3DA9 /* NHaasGroteskDSPro-35XLt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-35XLt.ttf"; sourceTree = "<group>"; };
 		7941BAA420DC120A001A3DA9 /* NHaasGroteskDSPro-96BlkIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-96BlkIt.ttf"; sourceTree = "<group>"; };
 		7941BAA520DC120B001A3DA9 /* NHaasGroteskDSPro-75Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-75Bd.ttf"; sourceTree = "<group>"; };
+		795DE67920DD78F000F8BE88 /* FillJarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillJarController.swift; sourceTree = "<group>"; };
+		795DE68620DD9D7400F8BE88 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		79E44E0320DC43CC006DF5CF /* JarListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarListController.swift; sourceTree = "<group>"; };
 		79E44E0620DC455D006DF5CF /* JarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarCollectionViewCell.swift; sourceTree = "<group>"; };
 		79E44E0720DC455D006DF5CF /* JarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JarCollectionViewCell.xib; sourceTree = "<group>"; };
-		79E44E0C20DC821A006DF5CF /* AnimationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationUtility.swift; sourceTree = "<group>"; };
 		9D41EB789EF040CE324089D9 /* Pods_ThoughtJar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThoughtJar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -160,11 +162,12 @@
 				7941BA4520DB75A6001A3DA9 /* ViewController.swift */,
 				7941BA4720DB75A6001A3DA9 /* Main.storyboard */,
 				79E44E0320DC43CC006DF5CF /* JarListController.swift */,
+				795DE68620DD9D7400F8BE88 /* ProfileController.swift */,
+				795DE67920DD78F000F8BE88 /* FillJarController.swift */,
 				7941BA4A20DB75A8001A3DA9 /* Assets.xcassets */,
 				7941BA4C20DB75A8001A3DA9 /* LaunchScreen.storyboard */,
 				7941BA4F20DB75A8001A3DA9 /* Info.plist */,
 				7941BA7120DB85F7001A3DA9 /* GoogleService-Info.plist */,
-				79E44E0C20DC821A006DF5CF /* AnimationUtility.swift */,
 			);
 			path = ThoughtJar;
 			sourceTree = "<group>";
@@ -448,10 +451,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				79E44E0420DC43CC006DF5CF /* JarListController.swift in Sources */,
-				79E44E0D20DC821A006DF5CF /* AnimationUtility.swift in Sources */,
 				7941BA4620DB75A6001A3DA9 /* ViewController.swift in Sources */,
 				79E44E0820DC455D006DF5CF /* JarCollectionViewCell.swift in Sources */,
+				795DE67A20DD78F000F8BE88 /* FillJarController.swift in Sources */,
 				7941BA4420DB75A6001A3DA9 /* AppDelegate.swift in Sources */,
+				795DE68720DD9D7400F8BE88 /* ProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

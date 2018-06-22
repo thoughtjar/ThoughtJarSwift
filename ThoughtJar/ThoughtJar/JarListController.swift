@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import BubbleTransition
 
 struct jarData {
     let jarTitle : String!
@@ -22,8 +23,42 @@ class JarListController: UIViewController, UIViewControllerTransitioningDelegate
     let JarCollectionViewCellId: String = "JarCollectionViewCell"
     @IBOutlet weak var JarListCollectionView: UICollectionView!
     
+    var origin = CGPoint(x:322,y:29)
+    
     var jarDataList = [jarData]()
     
+    let transition = BubbleTransition()
+    
+    @IBAction func openProfile(_ sender: UIButton) {
+        performSegue(withIdentifier: "showProfile", sender: nil)
+    }
+    
+    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showProfile"){
+            let controller = segue.destination
+            controller.transitioningDelegate = self
+            controller.modalPresentationStyle = .custom
+        }
+    }
+    
+    // MARK: UIViewControllerTransitioningDelegate
+    
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = self.origin
+        transition.bubbleColor = JarListCollectionView.backgroundColor!
+        transition.duration = 0.2
+        return transition
+    }
+    
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint = self.origin
+        transition.bubbleColor = JarListCollectionView.backgroundColor!
+        transition.duration = 0.2
+        return transition
+    }
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,37 +90,16 @@ class JarListController: UIViewController, UIViewControllerTransitioningDelegate
             }
         }
 
-        /*
-        jarDataList = [jarData(jarTitle: "Title 1", jarDescription: "Descr 1", jarCreator: "Creator 1", jarNumQuestions: "2",                               jarMoneyAmt: "1.00"),
-                       jarData(jarTitle: "Title 2", jarDescription: "Descr 2", jarCreator: "Creator 2", jarNumQuestions: "4", jarMoneyAmt: "2.00"),
-                       jarData(jarTitle: "Title 3", jarDescription: "Descr 3", jarCreator: "Creator 3", jarNumQuestions: "3", jarMoneyAmt: "3.00")]
-        (/
-        */
- 
         print("in jar list controller")
     }
-
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
 
-extension JarListController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension JarListController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return jarDataList.count
     }
@@ -122,6 +136,10 @@ extension JarListController: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: JarCollectionViewCellId, for: indexPath) as! JarCollectionViewCell
+        //self.origin = cell.center
+        print(self.origin)
+        performSegue(withIdentifier: "showJar", sender: nil)
     }
     
 }
