@@ -35,9 +35,10 @@ class JarListController: UIViewController, UIViewControllerTransitioningDelegate
         ]
         
         let parameters: Parameters = ["access-token": UserDefaults.standard.string(forKey: "access-token")]
-        //let url = "https://api.thoughtjar.net/fillJars"
+        let url = "https://api.thoughtjar.net/fillJars"
         //let url = "http://localhost:5000/fillJars"
-        Alamofire.request("http://localhost:5000/fillJars", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON{ response in
+        //let url = "http://198.168.1.2:5000/fillJars"
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON{ response in
             if let result = response.result.value {
                 
                 let JSON = (result as! NSDictionary)

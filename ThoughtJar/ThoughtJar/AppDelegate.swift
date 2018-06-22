@@ -31,10 +31,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         let parameters: Parameters = ["id_token": String(authentication.idToken),
                                       "isMobile": "1"]
-        //let url = "https://api.thoughtjar.net/authenticate"
+        let url = "https://api.thoughtjar.net/authenticate"
         //let url = "http://localhost:5000/authenticate"
-        Alamofire.request("http://localhost:5000/authenticate", method: .post, parameters: parameters).responseJSON {response in
-            
+        //let url = "http://198.168.1.2:5000/authenticate"
+        Alamofire.request(url, method: .post, parameters: parameters).responseJSON {response in
+            print("authenticating")
             if let result = response.result.value {
                 let JSON = result as! NSDictionary
                 UserDefaults.standard.set((JSON["access-token"])!, forKey: "access-token") //set access-token
