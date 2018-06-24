@@ -48,7 +48,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             //transition.subtype = kCATransitionFromBottom
             transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
             self.window?.rootViewController!.view.window!.layer.add(transition, forKey: kCATransition)
-            self.window?.rootViewController!.performSegue(withIdentifier: "LoginToJarList", sender: nil)
+            let vc = self.window?.rootViewController!.storyboard?.instantiateViewController(withIdentifier: "navController") as! UINavigationController
+            //self.window?.rootViewController!.navigationController!.pushViewController(vc, animated: false)
+            self.window?.rootViewController!.present(vc, animated: false, completion: nil)
+            //self.window?.rootViewController!.performSegue(withIdentifier: "LoginToJarList", sender: nil)
         }
     }
     
