@@ -23,16 +23,19 @@ class JarListController: UIViewController, UIViewControllerTransitioningDelegate
     let JarCollectionViewCellId: String = "JarCollectionViewCell"
     @IBOutlet weak var JarListCollectionView: UICollectionView!
     
-    var origin = CGPoint(x:322,y:29)
+    //var origin = CGPoint(x:322,y:29)
     
     var jarDataList = [jarData]()
+    var refresher:UIRefreshControl!
     
-    let transition = BubbleTransition()
+    //let transition = BubbleTransition()
     
     @IBAction func openProfile(_ sender: UIButton) {
-        performSegue(withIdentifier: "showProfile", sender: nil)
+        //performSegue(withIdentifier: "showProfile", sender: nil)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "profile") as! ProfileController
+        self.present(vc, animated: true, completion: nil)
     }
-    
+    /*
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "showProfile"){
             let controller = segue.destination
@@ -47,7 +50,7 @@ class JarListController: UIViewController, UIViewControllerTransitioningDelegate
         transition.transitionMode = .present
         transition.startingPoint = self.origin
         transition.bubbleColor = JarListCollectionView.backgroundColor!
-        transition.duration = 0.2
+        transition.duration = 0.3
         return transition
     }
     
@@ -55,15 +58,36 @@ class JarListController: UIViewController, UIViewControllerTransitioningDelegate
         transition.transitionMode = .dismiss
         transition.startingPoint = self.origin
         transition.bubbleColor = JarListCollectionView.backgroundColor!
-        transition.duration = 0.2
+        transition.duration = 0.3
         return transition
     }
- 
+    */
+    
+    @objc func refreshStream(_ sender: Any) {
+        
+        print("refresh")
+        //self.collectionView?.reloadData()
+        
+        //refreshControl?.endRefreshing()
+        let when = DispatchTime.now() + 0.6 // change to desired number of seconds
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            self.refresher.endRefreshing()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        
         let nibCell = UINib(nibName: JarCollectionViewCellId, bundle: nil)
         JarListCollectionView.register(nibCell, forCellWithReuseIdentifier: JarCollectionViewCellId)
+        
+        self.refresher = UIRefreshControl()
+        self.refresher.tintColor = UIColor(red: 255, green: 255, blue:255, alpha:1.0)
+        self.refresher.addTarget(self, action: #selector(refreshStream(_:)), for: .valueChanged)
+        JarListCollectionView.refreshControl = self.refresher
         
         let headers: HTTPHeaders = [
             "Content-Type": "application/json"
@@ -107,8 +131,8 @@ extension JarListController: UICollectionViewDelegate, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //let cell = Bundle.main.loadNibNamed("JarCollectionViewCell", owner: self, options: nil) as! JarCollectionViewCell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: JarCollectionViewCellId, for: indexPath) as! JarCollectionViewCell
-        print(jarDataList)
-        print("1")
+        //print(jarDataList)
+        //print("1")
         cell.jarTitle.text = jarDataList[indexPath.item].jarTitle
         cell.jarDescription.text = jarDataList[indexPath.item].jarDescription
         cell.jarCreator.text = jarDataList[indexPath.item].jarCreator
@@ -135,10 +159,14 @@ extension JarListController: UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.item)
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: JarCollectionViewCellId, for: indexPath) as! JarCollectionViewCell
-        //self.origin = cell.center
-        print(self.origin)
+        /*
+        let transition = CATransition()
+        transition.duration = 0.4
+        transition.type = kCATransitionMoveIn
+        transition.subtype = kCATransitionFromRight
+        transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
+        view.window!.layer.add(transition, forKey: kCATransition)
+        */
         performSegue(withIdentifier: "showJar", sender: nil)
     }
     

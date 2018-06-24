@@ -42,6 +42,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 UserDefaults.standard.set((JSON["email"])!, forKey: "email")  //email
                 UserDefaults.standard.set((JSON["name"])!, forKey: "name") //name
             }
+            let transition = CATransition()
+            transition.duration = 0.5
+            transition.type = kCATransitionFade
+            //transition.subtype = kCATransitionFromBottom
+            transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
+            self.window?.rootViewController!.view.window!.layer.add(transition, forKey: kCATransition)
             self.window?.rootViewController!.performSegue(withIdentifier: "LoginToJarList", sender: nil)
         }
     }

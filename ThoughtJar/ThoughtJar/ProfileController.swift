@@ -7,17 +7,31 @@
 //
 
 import UIKit
+import GoogleSignIn
 
-class ProfileController: UIViewController {
+class ProfileController: UIViewController, GIDSignInUIDelegate {
 
+    @IBOutlet weak var userName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print("entering profile controller")
+        userName.text = (UserDefaults.standard.string(forKey: "name"))!
+    }
+    
+    @IBAction func logOut(_ sender: UIButton) {
+        print("logging out")
+        UserDefaults.standard.removeObject(forKey: "name")
+        UserDefaults.standard.removeObject(forKey: "email")
+        UserDefaults.standard.removeObject(forKey: "access-token")
+        GIDSignIn.sharedInstance()?.signOut()
+        self.dismiss(animated: true, completion: nil)
+        
     }
     
     @IBAction func dismiss(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+        //self.navigationController?.popViewController(animated: true)
     }
     
     /*

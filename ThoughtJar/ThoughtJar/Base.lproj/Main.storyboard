@@ -49,17 +49,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="d8v-rs-bwF" kind="show" identifier="LoginToJarList" id="i7v-Z1-etH"/>
+                        <segue destination="McI-Hz-Lc9" kind="show" identifier="LoginToJarList" animates="NO" id="i7v-Z1-etH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-654" y="134"/>
         </scene>
         <!--JarList-->
         <scene sceneID="EDS-pL-1Lu">
             <objects>
-                <viewController title="JarList" id="d8v-rs-bwF" customClass="JarListController" customModule="ThoughtJar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JarListController" title="JarList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d8v-rs-bwF" customClass="JarListController" customModule="ThoughtJar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4El-Mo-2s4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,15 +89,8 @@
                                     <outlet property="delegate" destination="d8v-rs-bwF" id="Mjj-Oy-2pv"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13U-fR-xQ0">
-                                <rect key="frame" x="16" y="61" width="68" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NHaasGroteskDSPro-65Md" family="Neue Haas Grotesk Display Pro" pointSize="36"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="JarListSeparator" translatesAutoresizingMaskIntoConstraints="NO" id="rKc-R6-fBY">
-                                <rect key="frame" x="16" y="99" width="343" height="29"/>
+                                <rect key="frame" x="16" y="107" width="343" height="12"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tr-rX-SZ3">
@@ -108,92 +101,207 @@
                                     <action selector="openProfile:" destination="d8v-rs-bwF" eventType="touchUpInside" id="Pc9-k9-sqy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13U-fR-xQ0">
+                                <rect key="frame" x="16" y="64" width="68" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NHaasGroteskDSPro-65Md" family="Neue Haas Grotesk Display Pro" pointSize="36"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.17538484930000001" green="0.31553912160000003" blue="0.66470295189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="GUP-Sk-XII"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Tdy-np-Jas"/>
                     <connections>
                         <outlet property="JarListCollectionView" destination="pVU-t4-GA5" id="vwG-I3-4Cp"/>
-                        <segue destination="eo1-br-tWa" kind="show" identifier="showJar" id="Epp-nY-npT"/>
-                        <segue destination="h5Z-hX-Ga9" kind="show" identifier="showProfile" id="pON-N9-akB"/>
+                        <segue destination="eo1-br-tWa" kind="show" identifier="showJar" id="FkJ-hr-YIY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6E3-2K-wkn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="925.60000000000002" y="133.5832083958021"/>
+            <point key="canvasLocation" x="900" y="133.5832083958021"/>
         </scene>
-        <!--Profile Controller-->
+        <!--profile-->
         <scene sceneID="GqN-70-dRN">
             <objects>
-                <viewController id="h5Z-hX-Ga9" customClass="ProfileController" customModule="ThoughtJar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profile" title="profile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h5Z-hX-Ga9" customClass="ProfileController" customModule="ThoughtJar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Hf-hY-KQ1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dave Ho" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooD-gs-mRR">
-                                <rect key="frame" x="16" y="20" width="150" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Marc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooD-gs-mRR">
+                                <rect key="frame" x="18" y="70" width="269" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NHaasGroteskDSPro-75Bd" family="Neue Haas Grotesk Display Pro" pointSize="40"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.074730642139911652" green="0.14123401045799255" blue="0.29071369767189026" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyF-xJ-Yx1">
-                                <rect key="frame" x="16" y="599" width="68" height="48"/>
+                                <rect key="frame" x="318" y="35" width="40" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NHaasGroteskDSPro-65Md" family="Neue Haas Grotesk Display Pro" pointSize="30"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="NHaasGroteskDSPro-65Md" family="Neue Haas Grotesk Display Pro" pointSize="17"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.074730642139911652" green="0.14123401045799255" blue="0.29071369767189026" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="dismiss:" destination="h5Z-hX-Ga9" eventType="touchUpInside" id="Jd5-6Z-n6q"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRc-8A-Ucx">
+                                <rect key="frame" x="17" y="35" width="59" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NHaasGroteskDSPro-65Md" family="Neue Haas Grotesk Display Pro" pointSize="17"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" red="0.8101998730964467" green="0.12119845599552179" blue="0.0069999515128874104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOut:" destination="h5Z-hX-Ga9" eventType="touchUpInside" id="BwF-Sh-wY1"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FilledJar" translatesAutoresizingMaskIntoConstraints="NO" id="YdY-z9-qFp">
+                                <rect key="frame" x="18" y="180" width="102" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="jars filled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbd-dE-rV4">
+                                <rect key="frame" x="18" y="140" width="101" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NHaasGroteskDSPro-65Md" family="Neue Haas Grotesk Display Pro" pointSize="26"/>
+                                <color key="textColor" red="0.074730642139999998" green="0.14123401050000001" blue="0.2907136977" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Buck" translatesAutoresizingMaskIntoConstraints="NO" id="xxy-Wy-xM1">
+                                <rect key="frame" x="18" y="362" width="102" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSR-oV-Rle">
+                                <rect key="frame" x="285" y="207" width="73" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NHaasGroteskDSPro-65Md" family="Neue Haas Grotesk Display Pro" pointSize="50"/>
+                                <color key="textColor" red="0.074730642139999998" green="0.14123401050000001" blue="0.2907136977" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$14.50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUK-gG-x59">
+                                <rect key="frame" x="206" y="366" width="152" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NHaasGroteskDSPro-65Md" family="Neue Haas Grotesk Display Pro" pointSize="50"/>
+                                <color key="textColor" red="0.074730642139999998" green="0.14123401050000001" blue="0.2907136977" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="money earned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJy-SF-2HG">
+                                <rect key="frame" x="17" y="322" width="162" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NHaasGroteskDSPro-65Md" family="Neue Haas Grotesk Display Pro" pointSize="26"/>
+                                <color key="textColor" red="0.074730642139999998" green="0.14123401050000001" blue="0.2907136977" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.17538484930000001" green="0.31553912160000003" blue="0.66470295189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.97392326593399048" green="0.76520603895187378" blue="0.26405766606330872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="HNO-yY-lSg"/>
                     </view>
+                    <connections>
+                        <outlet property="userName" destination="ooD-gs-mRR" id="cmg-8O-EDL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0pr-8T-Btg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1775" y="-180"/>
+            <point key="canvasLocation" x="1773.5999999999999" y="-522.18890554722645"/>
         </scene>
         <!--Fill Jar Controller-->
         <scene sceneID="AMN-nc-hB6">
             <objects>
-                <viewController id="eo1-br-tWa" customClass="FillJarController" customModule="ThoughtJar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FillJarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eo1-br-tWa" customClass="FillJarController" customModule="ThoughtJar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tpr-07-6EM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jar Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2r-Fk-Bpl">
-                                <rect key="frame" x="16" y="20" width="146" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NHaasGroteskDSPro-75Bd" family="Neue Haas Grotesk Display Pro" pointSize="40"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYG-9O-k6b">
-                                <rect key="frame" x="16" y="599" width="110" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NHaasGroteskDSPro-65Md" family="Neue Haas Grotesk Display Pro" pointSize="30"/>
-                                <state key="normal" title="Go back">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Af-68-XWt" userLabel="Header">
+                                <rect key="frame" x="0.0" y="20" width="375" height="110"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jar Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaY-r5-wdX">
+                                        <rect key="frame" x="18" y="60" width="140" height="48"/>
+                                        <fontDescription key="fontDescription" name="NHaasGroteskDSPro-65Md" family="Neue Haas Grotesk Display Pro" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="JaY-r5-wdX" secondAttribute="bottom" constant="2" id="2Ak-My-hi2"/>
+                                    <constraint firstItem="JaY-r5-wdX" firstAttribute="leading" secondItem="0Af-68-XWt" secondAttribute="leading" constant="18" id="8CH-R6-r43"/>
+                                    <constraint firstAttribute="height" constant="110" id="DV8-vy-TkG"/>
+                                    <constraint firstAttribute="trailing" secondItem="JaY-r5-wdX" secondAttribute="trailing" constant="217" id="bBq-uh-4Fd"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bQm-yJ-XG1">
+                                <rect key="frame" x="0.0" y="138" width="375" height="529"/>
+                                <color key="backgroundColor" red="0.29516655209999998" green="0.66457337139999995" blue="0.2282357216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OYg-xQ-F6R">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cm2-S8-kfA">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
                                 <connections>
-                                    <action selector="dismissView:" destination="eo1-br-tWa" eventType="touchUpInside" id="JF4-Tx-mdt"/>
+                                    <outlet property="dataSource" destination="eo1-br-tWa" id="vcj-Lq-lKw"/>
+                                    <outlet property="delegate" destination="eo1-br-tWa" id="xrP-sY-nUW"/>
                                 </connections>
-                            </button>
+                            </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.17538484930000001" green="0.31553912160000003" blue="0.66470295189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.29516655206680298" green="0.66457337141036987" blue="0.22823572158813477" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bQm-yJ-XG1" firstAttribute="trailing" secondItem="DE9-5t-wMf" secondAttribute="trailing" id="B4v-2b-JOf"/>
+                            <constraint firstItem="0Af-68-XWt" firstAttribute="top" secondItem="Tpr-07-6EM" secondAttribute="top" constant="20" id="CGB-K4-SVp"/>
+                            <constraint firstItem="0Af-68-XWt" firstAttribute="trailing" secondItem="DE9-5t-wMf" secondAttribute="trailing" id="H0H-Ld-WmE"/>
+                            <constraint firstItem="bQm-yJ-XG1" firstAttribute="top" secondItem="0Af-68-XWt" secondAttribute="bottom" constant="8" id="MAc-hD-YVU"/>
+                            <constraint firstItem="bQm-yJ-XG1" firstAttribute="bottom" secondItem="DE9-5t-wMf" secondAttribute="bottom" id="SIp-D8-R4v"/>
+                            <constraint firstItem="0Af-68-XWt" firstAttribute="leading" secondItem="DE9-5t-wMf" secondAttribute="leading" id="h2D-dl-fAH"/>
+                            <constraint firstItem="bQm-yJ-XG1" firstAttribute="leading" secondItem="DE9-5t-wMf" secondAttribute="leading" id="vsJ-Ty-fRM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DE9-5t-wMf"/>
                     </view>
+                    <navigationItem key="navigationItem" id="CTw-a2-85Y"/>
+                    <connections>
+                        <outlet property="QuestionListCollectionView" destination="bQm-yJ-XG1" id="Rfq-ky-aui"/>
+                        <outlet property="headerHeightConstraint" destination="DV8-vy-TkG" id="xCW-vI-tFx"/>
+                        <outlet property="jarTitle" destination="JaY-r5-wdX" id="Dgw-At-pWh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLd-dQ-nTR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1774" y="513"/>
+            <point key="canvasLocation" x="1773.5999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2Nj-pi-RTD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="McI-Hz-Lc9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hYL-0z-xNu">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="d8v-rs-bwF" kind="relationship" relationship="rootViewController" id="WK2-tA-udc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sxi-5E-pqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="134"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Buck" width="170" height="114"/>
+        <image name="FilledJar" width="170" height="198"/>
         <image name="JarListSeparator" width="678" height="4"/>
         <image name="ProfileIcon" width="48" height="48"/>
         <image name="White logo" width="2917" height="730"/>
