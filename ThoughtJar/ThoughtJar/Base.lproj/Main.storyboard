@@ -195,6 +195,10 @@
                                 <color key="textColor" red="0.074730642139999998" green="0.14123401050000001" blue="0.2907136977" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkDivider" translatesAutoresizingMaskIntoConstraints="NO" id="Hjs-Dy-XX5">
+                                <rect key="frame" x="18" y="60" width="340" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.97392326593399048" green="0.76520603895187378" blue="0.26405766606330872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="HNO-yY-lSg"/>
@@ -222,7 +226,7 @@
                                         <rect key="frame" x="16" y="96" width="343" height="4"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="testing jar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaY-r5-wdX">
-                                        <rect key="frame" x="18" y="42" width="282" height="48"/>
+                                        <rect key="frame" x="18" y="43" width="282" height="47"/>
                                         <fontDescription key="fontDescription" name="NHaasGroteskDSPro-65Md" family="Neue Haas Grotesk Display Pro" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -330,6 +334,7 @@
     </scenes>
     <resources>
         <image name="Buck" width="170" height="114"/>
+        <image name="DarkDivider" width="678" height="4"/>
         <image name="FilledJar" width="170" height="198"/>
         <image name="JarListSeparator" width="678" height="4"/>
         <image name="ProfileIcon" width="48" height="48"/>

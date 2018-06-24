@@ -25,8 +25,11 @@ class ProfileController: UIViewController, GIDSignInUIDelegate {
         UserDefaults.standard.removeObject(forKey: "email")
         UserDefaults.standard.removeObject(forKey: "access-token")
         GIDSignIn.sharedInstance()?.signOut()
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "login") as! ViewController
-        self.present(vc, animated: true, completion: nil)
+        
+        //let vc = self.storyboard?.instantiateViewController(withIdentifier: "login") as! ViewController
+        //self.present(vc, animated: true, completion: nil)
+        
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
         
     }
     
