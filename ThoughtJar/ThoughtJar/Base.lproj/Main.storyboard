@@ -199,6 +199,14 @@
                                 <rect key="frame" x="18" y="60" width="340" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gL0-V9-RWj">
+                                <rect key="frame" x="18" y="462" width="341" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="WithdrawButton" backgroundImage="WithdrawButton"/>
+                                <connections>
+                                    <action selector="withdrawMoney:" destination="h5Z-hX-Ga9" eventType="touchUpInside" id="3mj-LN-Prl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97392326593399048" green="0.76520603895187378" blue="0.26405766606330872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="HNO-yY-lSg"/>
@@ -339,5 +347,6 @@
         <image name="JarListSeparator" width="678" height="4"/>
         <image name="ProfileIcon" width="48" height="48"/>
         <image name="White logo" width="2917" height="730"/>
+        <image name="WithdrawButton" width="682" height="82"/>
     </resources>
 </document>

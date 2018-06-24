@@ -38,6 +38,9 @@ class ProfileController: UIViewController, GIDSignInUIDelegate {
         //self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func withdrawMoney(_ sender: UIButton) {
+        print("withdrawing money")
+    }
     /*
     // MARK: - Navigation
 
