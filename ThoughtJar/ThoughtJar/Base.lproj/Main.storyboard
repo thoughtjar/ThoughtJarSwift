@@ -216,24 +216,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Af-68-XWt" userLabel="Header">
-                                <rect key="frame" x="0.0" y="20" width="375" height="110"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jar Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaY-r5-wdX">
-                                        <rect key="frame" x="18" y="60" width="140" height="48"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JarListSeparator" translatesAutoresizingMaskIntoConstraints="NO" id="91z-qy-ofY">
+                                        <rect key="frame" x="16" y="96" width="343" height="4"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="testing jar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaY-r5-wdX">
+                                        <rect key="frame" x="18" y="42" width="282" height="48"/>
                                         <fontDescription key="fontDescription" name="NHaasGroteskDSPro-65Md" family="Neue Haas Grotesk Display Pro" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20/20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygt-zA-JS3">
+                                        <rect key="frame" x="304" y="66" width="55" height="24"/>
+                                        <fontDescription key="fontDescription" name="NHaasGroteskDSPro-65Md" family="Neue Haas Grotesk Display Pro" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5m-a3-CNn">
+                                        <rect key="frame" x="20" y="0.0" width="46" height="36"/>
+                                        <fontDescription key="fontDescription" name="NHaasGroteskDSPro-65Md" family="Neue Haas Grotesk Display Pro" pointSize="20"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismissJar:" destination="eo1-br-tWa" eventType="touchUpInside" id="0ks-ai-6SN"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="JaY-r5-wdX" secondAttribute="bottom" constant="2" id="2Ak-My-hi2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y5m-a3-CNn" secondAttribute="trailing" constant="309" id="3PT-Q9-2sV"/>
+                                    <constraint firstAttribute="trailing" secondItem="91z-qy-ofY" secondAttribute="trailing" constant="16" id="6c2-1p-oCX"/>
                                     <constraint firstItem="JaY-r5-wdX" firstAttribute="leading" secondItem="0Af-68-XWt" secondAttribute="leading" constant="18" id="8CH-R6-r43"/>
-                                    <constraint firstAttribute="height" constant="110" id="DV8-vy-TkG"/>
-                                    <constraint firstAttribute="trailing" secondItem="JaY-r5-wdX" secondAttribute="trailing" constant="217" id="bBq-uh-4Fd"/>
+                                    <constraint firstAttribute="trailing" secondItem="JaY-r5-wdX" secondAttribute="trailing" constant="75" id="CIG-JA-66r"/>
+                                    <constraint firstAttribute="height" constant="100" id="DV8-vy-TkG"/>
+                                    <constraint firstItem="Y5m-a3-CNn" firstAttribute="top" secondItem="0Af-68-XWt" secondAttribute="top" id="HA2-Pr-Ovj"/>
+                                    <constraint firstAttribute="bottom" secondItem="JaY-r5-wdX" secondAttribute="bottom" constant="10" id="My8-df-1Bm"/>
+                                    <constraint firstItem="Y5m-a3-CNn" firstAttribute="leading" secondItem="0Af-68-XWt" secondAttribute="leading" constant="20" id="Yv1-dC-iyu"/>
+                                    <constraint firstItem="91z-qy-ofY" firstAttribute="leading" secondItem="0Af-68-XWt" secondAttribute="leading" constant="16" id="hdG-XC-kat"/>
+                                    <constraint firstAttribute="bottom" secondItem="91z-qy-ofY" secondAttribute="bottom" id="ltP-dv-dbo"/>
+                                    <constraint firstAttribute="trailing" secondItem="ygt-zA-JS3" secondAttribute="trailing" constant="16" id="m2Y-Vv-utc"/>
+                                    <constraint firstItem="91z-qy-ofY" firstAttribute="top" secondItem="ygt-zA-JS3" secondAttribute="bottom" constant="6" id="mJJ-Kn-u9W"/>
+                                    <constraint firstItem="ygt-zA-JS3" firstAttribute="leading" secondItem="0Af-68-XWt" secondAttribute="leading" constant="304" id="tfa-8F-U6O"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bQm-yJ-XG1">
-                                <rect key="frame" x="0.0" y="138" width="375" height="529"/>
+                                <rect key="frame" x="0.0" y="128" width="375" height="539"/>
                                 <color key="backgroundColor" red="0.29516655209999998" green="0.66457337139999995" blue="0.2282357216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OYg-xQ-F6R">
                                     <size key="itemSize" width="50" height="50"/>
@@ -274,6 +302,7 @@
                         <outlet property="QuestionListCollectionView" destination="bQm-yJ-XG1" id="Rfq-ky-aui"/>
                         <outlet property="headerHeightConstraint" destination="DV8-vy-TkG" id="xCW-vI-tFx"/>
                         <outlet property="jarTitle" destination="JaY-r5-wdX" id="Dgw-At-pWh"/>
+                        <outlet property="jarTitleLeftConstraint" destination="8CH-R6-r43" id="gO1-rU-bFf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLd-dQ-nTR" userLabel="First Responder" sceneMemberID="firstResponder"/>

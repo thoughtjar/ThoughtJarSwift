@@ -14,19 +14,25 @@ class FillJarController: UIViewController {
     
     @IBOutlet weak var QuestionListCollectionView: UICollectionView!
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var jarTitleLeftConstraint: NSLayoutConstraint!
     @IBOutlet weak var jarTitle: UILabel!
     
-    let maxHeaderHeight: CGFloat = 120;
-    let minHeaderHeight: CGFloat = 60;
+    let maxHeaderHeight: CGFloat = 110;
+    let minHeaderHeight: CGFloat = 40;
     
     var previousScrollOffset: CGFloat = 0;
     
     var questionDataList = [jarData]()
     
+    var initialLeftBorder:CGFloat = 0.0;
+    var length: CGFloat = 0.0;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        jarTitle.sizeToFit()
+        self.initialLeftBorder = jarTitleLeftConstraint.constant
+        self.length = (UIScreen.main.bounds.width/2.0)-(self.jarTitle.intrinsicContentSize.width/4.0)-self.initialLeftBorder
+        //jarTitle.sizeToFit()
         
         let nibCell = UINib(nibName: QuestionCollectionViewCellId, bundle: nil)
         QuestionListCollectionView.register(nibCell, forCellWithReuseIdentifier: QuestionCollectionViewCellId)
@@ -41,174 +47,10 @@ class FillJarController: UIViewController {
         self.headerHeightConstraint.constant = self.maxHeaderHeight
         updateHeader()
     }
-    /*
-
-    @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
-    
-    @IBOutlet weak var jarTitle: UILabel!
-
-    @IBOutlet weak var titleTop: UILabel!
-    
-    @IBOutlet weak var titleTopConstraint: NSLayoutConstraint!
-    
-    let maxHeaderHeight: CGFloat = 120;
-    let minHeaderHeight: CGFloat = 60;
-    
-    var previousScrollOffset: CGFloat = 0;
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print("entering filljar view controller")
-        // Do any additional setup after loading the view.
-        
-        //self.navigationController?.setNavigationBarHidden(false, animated: false)
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+    @IBAction func dismissJar(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.headerHeightConstraint.constant = self.maxHeaderHeight
-        updateHeader()
-    }
-    
-    @IBAction func dismissView(_ sender: UIButton) {
-        /*
-        let transition = CATransition()
-        transition.duration = 0.4
-        transition.type = kCATransitionReveal
-        transition.subtype = kCATransitionFromLeft
-        transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
-        view.window!.layer.add(transition, forKey: kCATransition)
-        */
-        //self.navigationController?.setNavigationBarHidden(false, animated: false)
-        //self.dismiss(animated: false, completion: nil)
-    }
-    
-    
-}
-
-extension FillJarController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 40
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel!.text = "Cell \(indexPath.row)"
-        return cell
-    }
-}
-
-extension FillJarController: UITableViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let scrollDiff = scrollView.contentOffset.y - self.previousScrollOffset
-        
-        let absoluteTop: CGFloat = 0;
-        let absoluteBottom: CGFloat = scrollView.contentSize.height - scrollView.frame.size.height;
-        
-        let isScrollingDown = scrollDiff > 0 && scrollView.contentOffset.y > absoluteTop
-        let isScrollingUp = scrollDiff < 0 && scrollView.contentOffset.y < absoluteBottom
-        
-        if canAnimateHeader(scrollView) {
-            // Calculate new header height
-            var newHeight = self.headerHeightConstraint.constant
-            if isScrollingDown {
-                newHeight = max(self.minHeaderHeight, self.headerHeightConstraint.constant - abs(scrollDiff))
-            } else if isScrollingUp {
-                newHeight = min(self.maxHeaderHeight, self.headerHeightConstraint.constant + abs(scrollDiff))
-            }
-            print(newHeight)
-            
-            // Header needs to animate
-            if newHeight != self.headerHeightConstraint.constant {
-                //print("newHeight != self.headerHeightConstraint.constant")
-                self.headerHeightConstraint.constant = newHeight
-                self.updateHeader()
-                self.setScrollPosition(self.previousScrollOffset)
-            }
-            
-            self.previousScrollOffset = scrollView.contentOffset.y
-        }
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        self.scrollViewDidStopScrolling()
-    }
-    
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if !decelerate {
-            self.scrollViewDidStopScrolling()
-        }
-    }
-    
-    func scrollViewDidStopScrolling() {
-        print("scroll view stopped scrolling")
-        let range = self.maxHeaderHeight - self.minHeaderHeight
-        let midPoint = self.minHeaderHeight + (range / 2)
-        
-        if self.headerHeightConstraint.constant > midPoint {
-            self.expandHeader()
-        } else {
-            self.collapseHeader()
-        }
-    }
-    
-    func canAnimateHeader(_ scrollView: UIScrollView) -> Bool {
-        // Calculate the size of the scrollView when header is collapsed
-        let scrollViewMaxHeight = scrollView.frame.height + self.headerHeightConstraint.constant - minHeaderHeight
-        
-        // Make sure that when header is collapsed, there is still room to scroll
-        return scrollView.contentSize.height > scrollViewMaxHeight
-    }
-    
-    func collapseHeader() {
-        print("collapsing header")
-        self.view.layoutIfNeeded()
-        UIView.animate(withDuration: 0.2, animations: {
-            self.headerHeightConstraint.constant = self.minHeaderHeight
-            self.updateHeader()
-            self.view.layoutIfNeeded()
-        })
-    }
-    
-    func expandHeader() {
-        self.view.layoutIfNeeded()
-        UIView.animate(withDuration: 0.2, animations: {
-            self.headerHeightConstraint.constant = self.maxHeaderHeight
-            self.updateHeader()
-            self.view.layoutIfNeeded()
-        })
-    }
-    
-    func setScrollPosition(_ position: CGFloat) {
-        self.tableView.contentOffset = CGPoint(x: self.tableView.contentOffset.x, y: position)
-    }
-    
-    func updateHeader() {
-        let range = self.maxHeaderHeight - self.minHeaderHeight
-        let openAmount = self.headerHeightConstraint.constant - self.minHeaderHeight
-        let percentage = openAmount / range
-        let titleTopPercentage = (range-openAmount) / range
-        
-        //self.titleTopConstraint.constant = -openAmount + 10
-        //self.jarTitle.alpha = percentage
-        self.jarTitle.font = self.jarTitle.font.withSize(40-(20*(1.0-percentage)))
-        self.titleTop.alpha = titleTopPercentage
-    }
-}
-*/
 }
 
 extension FillJarController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -265,7 +107,7 @@ extension FillJarController: UICollectionViewDelegate, UICollectionViewDataSourc
             } else if isScrollingUp {
                 newHeight = min(self.maxHeaderHeight, self.headerHeightConstraint.constant + abs(scrollDiff))
             }
-            print(newHeight)
+            //print(newHeight)
             
             // Header needs to animate
             if newHeight != self.headerHeightConstraint.constant {
@@ -336,10 +178,10 @@ extension FillJarController: UICollectionViewDelegate, UICollectionViewDataSourc
         let range = self.maxHeaderHeight - self.minHeaderHeight
         let openAmount = self.headerHeightConstraint.constant - self.minHeaderHeight
         let percentage = openAmount / range
-        let titleTopPercentage = (range-openAmount) / range
-        
+        print(self.initialLeftBorder)
         //self.titleTopConstraint.constant = -openAmount + 10
         //self.jarTitle.alpha = percentage
+        self.jarTitleLeftConstraint.constant = self.initialLeftBorder + (self.length*(1.0-percentage))
         self.jarTitle.font = self.jarTitle.font.withSize(40-(20*(1.0-percentage)))
         //self.titleTop.alpha = titleTopPercentage
     }
