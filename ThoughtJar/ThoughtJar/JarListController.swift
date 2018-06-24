@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import BubbleTransition
 
 struct jarData {
     let jarTitle : String!
@@ -89,9 +88,6 @@ class JarListController: UIViewController, UIViewControllerTransitioningDelegate
         self.refresher.addTarget(self, action: #selector(refreshStream(_:)), for: .valueChanged)
         JarListCollectionView.refreshControl = self.refresher
         
-        let headers: HTTPHeaders = [
-            "Content-Type": "application/json"
-        ]
         
         let parameters: Parameters = ["access-token": UserDefaults.standard.string(forKey: "access-token")]
         let url = "https://api.thoughtjar.net/fillJars"
