@@ -31,37 +31,10 @@ class JarListController: UIViewController, UIViewControllerTransitioningDelegate
     
     @IBAction func openProfile(_ sender: UIButton) {
         //performSegue(withIdentifier: "showProfile", sender: nil)
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "profile") as! ProfileController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "profileNavController") as! UINavigationController
         self.present(vc, animated: true, completion: nil)
     }
-    /*
-    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "showProfile"){
-            let controller = segue.destination
-            controller.transitioningDelegate = self
-            controller.modalPresentationStyle = .custom
-        }
-    }
-    
-    // MARK: UIViewControllerTransitioningDelegate
-    
-    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.transitionMode = .present
-        transition.startingPoint = self.origin
-        transition.bubbleColor = JarListCollectionView.backgroundColor!
-        transition.duration = 0.3
-        return transition
-    }
-    
-    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.transitionMode = .dismiss
-        transition.startingPoint = self.origin
-        transition.bubbleColor = JarListCollectionView.backgroundColor!
-        transition.duration = 0.3
-        return transition
-    }
-    */
-    
+
     @objc func refreshStream(_ sender: Any) {
         
         print("refresh")

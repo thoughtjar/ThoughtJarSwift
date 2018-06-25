@@ -15,6 +15,10 @@ class ProfileController: UIViewController, GIDSignInUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        
         print("entering profile controller")
         userName.text = (UserDefaults.standard.string(forKey: "name"))!
     }
@@ -41,6 +45,11 @@ class ProfileController: UIViewController, GIDSignInUIDelegate {
     @IBAction func withdrawMoney(_ sender: UIButton) {
         print("withdrawing money")
     }
+    
+    @IBAction func showInviteFriends(_ sender: UIButton) {
+        performSegue(withIdentifier: "showInviteFriends", sender: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -49,6 +49,7 @@
 		795DE6A620DF6D3A00F8BE88 /* NHaasGroteskDSPro-76BdIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA9D20DC1208001A3DA9 /* NHaasGroteskDSPro-76BdIt.ttf */; };
 		795DE6A720DF6D3A00F8BE88 /* NHaasGroteskDSPro-95Blk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BAA120DC1209001A3DA9 /* NHaasGroteskDSPro-95Blk.ttf */; };
 		795DE6A820DF6D3A00F8BE88 /* NHaasGroteskDSPro-96BlkIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BAA420DC120A001A3DA9 /* NHaasGroteskDSPro-96BlkIt.ttf */; };
+		79B40BED20E0BEAC001224F5 /* InviteFriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B40BEC20E0BEAC001224F5 /* InviteFriendsController.swift */; };
 		79DE3C7120DF73DB005D3A33 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79DE3C7020DF73DB005D3A33 /* Alamofire.framework */; };
 		79E44E0420DC43CC006DF5CF /* JarListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44E0320DC43CC006DF5CF /* JarListController.swift */; };
 		79E44E0820DC455D006DF5CF /* JarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44E0620DC455D006DF5CF /* JarCollectionViewCell.swift */; };
@@ -108,6 +109,7 @@
 		7941BAA520DC120B001A3DA9 /* NHaasGroteskDSPro-75Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-75Bd.ttf"; sourceTree = "<group>"; };
 		795DE67920DD78F000F8BE88 /* FillJarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillJarController.swift; sourceTree = "<group>"; };
 		795DE68620DD9D7400F8BE88 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		79B40BEC20E0BEAC001224F5 /* InviteFriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendsController.swift; sourceTree = "<group>"; };
 		79DE3C7020DF73DB005D3A33 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E44E0320DC43CC006DF5CF /* JarListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarListController.swift; sourceTree = "<group>"; };
 		79E44E0620DC455D006DF5CF /* JarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				7941BA4320DB75A6001A3DA9 /* AppDelegate.swift */,
 				7941BA4520DB75A6001A3DA9 /* ViewController.swift */,
 				7941BA4720DB75A6001A3DA9 /* Main.storyboard */,
+				79B40BEC20E0BEAC001224F5 /* InviteFriendsController.swift */,
 				79E44E0320DC43CC006DF5CF /* JarListController.swift */,
 				795DE68620DD9D7400F8BE88 /* ProfileController.swift */,
 				795DE67920DD78F000F8BE88 /* FillJarController.swift */,
@@ -487,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79E44E0420DC43CC006DF5CF /* JarListController.swift in Sources */,
+				79B40BED20E0BEAC001224F5 /* InviteFriendsController.swift in Sources */,
 				7941BA4620DB75A6001A3DA9 /* ViewController.swift in Sources */,
 				79E44E0820DC455D006DF5CF /* JarCollectionViewCell.swift in Sources */,
 				795DE67A20DD78F000F8BE88 /* FillJarController.swift in Sources */,
