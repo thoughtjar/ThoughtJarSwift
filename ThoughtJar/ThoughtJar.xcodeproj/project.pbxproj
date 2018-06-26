@@ -56,6 +56,8 @@
 		795DE6A720DF6D3A00F8BE88 /* NHaasGroteskDSPro-95Blk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BAA120DC1209001A3DA9 /* NHaasGroteskDSPro-95Blk.ttf */; };
 		795DE6A820DF6D3A00F8BE88 /* NHaasGroteskDSPro-96BlkIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BAA420DC120A001A3DA9 /* NHaasGroteskDSPro-96BlkIt.ttf */; };
 		79B40BED20E0BEAC001224F5 /* InviteFriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B40BEC20E0BEAC001224F5 /* InviteFriendsController.swift */; };
+		79C8D99620E2B9C70076C7B6 /* LongAnswerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C8D99420E2B9C70076C7B6 /* LongAnswerCollectionViewCell.swift */; };
+		79C8D99720E2B9C70076C7B6 /* LongAnswerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C8D99520E2B9C70076C7B6 /* LongAnswerCollectionViewCell.xib */; };
 		79DE3C7120DF73DB005D3A33 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79DE3C7020DF73DB005D3A33 /* Alamofire.framework */; };
 		79E44E0420DC43CC006DF5CF /* JarListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44E0320DC43CC006DF5CF /* JarListController.swift */; };
 		79E44E0820DC455D006DF5CF /* JarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44E0620DC455D006DF5CF /* JarCollectionViewCell.swift */; };
@@ -122,6 +124,8 @@
 		795DE67920DD78F000F8BE88 /* FillJarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillJarController.swift; sourceTree = "<group>"; };
 		795DE68620DD9D7400F8BE88 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		79B40BEC20E0BEAC001224F5 /* InviteFriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendsController.swift; sourceTree = "<group>"; };
+		79C8D99420E2B9C70076C7B6 /* LongAnswerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongAnswerCollectionViewCell.swift; sourceTree = "<group>"; };
+		79C8D99520E2B9C70076C7B6 /* LongAnswerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LongAnswerCollectionViewCell.xib; sourceTree = "<group>"; };
 		79DE3C7020DF73DB005D3A33 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E44E0320DC43CC006DF5CF /* JarListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarListController.swift; sourceTree = "<group>"; };
 		79E44E0620DC455D006DF5CF /* JarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -268,6 +272,8 @@
 				7923914420E1A938004F37F5 /* MultipleChoiceCollectionViewCell.xib */,
 				7923914720E1BC7C004F37F5 /* NumberAnswerCollectionViewCell.swift */,
 				7923914820E1BC7C004F37F5 /* NumberAnswerCollectionViewCell.xib */,
+				79C8D99420E2B9C70076C7B6 /* LongAnswerCollectionViewCell.swift */,
+				79C8D99520E2B9C70076C7B6 /* LongAnswerCollectionViewCell.xib */,
 			);
 			path = JarCells;
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 				7941BAA820DC1216001A3DA9 /* NHaasGroteskDSPro-25Th.ttf in Resources */,
 				7941BAAE20DC1225001A3DA9 /* NHaasGroteskDSPro-55Rg.ttf in Resources */,
 				7941BAAB20DC121D001A3DA9 /* NHaasGroteskDSPro-36XLtIt.ttf in Resources */,
+				79C8D99720E2B9C70076C7B6 /* LongAnswerCollectionViewCell.xib in Resources */,
 				7941BAB220DC122E001A3DA9 /* NHaasGroteskDSPro-75Bd.ttf in Resources */,
 				79E44E0920DC455D006DF5CF /* JarCollectionViewCell.xib in Resources */,
 				7941BA4E20DB75A8001A3DA9 /* LaunchScreen.storyboard in Resources */,
@@ -512,6 +519,7 @@
 				79B40BED20E0BEAC001224F5 /* InviteFriendsController.swift in Sources */,
 				7941BA4620DB75A6001A3DA9 /* ViewController.swift in Sources */,
 				79E44E0820DC455D006DF5CF /* JarCollectionViewCell.swift in Sources */,
+				79C8D99620E2B9C70076C7B6 /* LongAnswerCollectionViewCell.swift in Sources */,
 				7923914520E1A939004F37F5 /* MultipleChoiceCollectionViewCell.swift in Sources */,
 				7923914920E1BC7C004F37F5 /* NumberAnswerCollectionViewCell.swift in Sources */,
 				795DE67A20DD78F000F8BE88 /* FillJarController.swift in Sources */,
