@@ -153,7 +153,7 @@ extension JarListController: UICollectionViewDelegate, UICollectionViewDataSourc
     
 
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.1) {
             if let cell = collectionView.cellForItem(at: indexPath) as? JarCollectionViewCell {
                 cell.jarTitle.alpha = CGFloat(0.4)
                 cell.jarDescription.alpha = CGFloat(0.4)
@@ -167,7 +167,7 @@ extension JarListController: UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.1) {
             if let cell = collectionView.cellForItem(at: indexPath) as? JarCollectionViewCell {
                 cell.jarTitle.alpha = CGFloat(1)
                 cell.jarDescription.alpha = CGFloat(1)
