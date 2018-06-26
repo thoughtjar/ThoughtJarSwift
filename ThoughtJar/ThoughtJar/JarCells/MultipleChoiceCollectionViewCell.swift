@@ -23,7 +23,8 @@ class MultipleChoiceCollectionViewCell: UICollectionViewCell {
 
     func addButton(field:String){
         //print("multiplechoicecell: "+field)
-        let button = UIButton(frame: CGRect(x: 8, y: 30+(45*buttonCount), width: 330, height: 40))
+        let optimalHeight = questionField.optimalHeight + 8
+        let button = UIButton(frame: CGRect(x: 8, y: (optimalHeight+CGFloat(45*buttonCount)), width: 337, height: 40))
         button.backgroundColor = UIColor( red: 0.9, green: 0.9, blue:0.9, alpha: 1.0 )
         button.layer.cornerRadius = 13
         button.setTitle(alphabetList[buttonCount] + "      " + field, for: .normal)

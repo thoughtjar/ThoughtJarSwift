@@ -14,6 +14,10 @@ struct shortAnswerData {
     let questionField : String!
 }
 
+struct longAnswerData {
+    let questionField : String!
+}
+
 struct multipleChoiceData {
     let questionField : String!
     let options : [String]!
@@ -27,6 +31,7 @@ class FillJarController: UIViewController {
 
     let QuestionCollectionViewCellId: String = "JarCollectionViewCell"
     let ShortAnswerCollectionViewCellId: String = "ShortAnswerCollectionViewCell"
+    let LongAnswerCollectionViewCellId: String = "LongAnswerCollectionViewCell"
     let NumberAnswerCollectionViewCellId: String = "NumberAnswerCollectionViewCell"
     let MultipleChoiceCollectionViewCellId: String = "MultipleChoiceCollectionViewCell"
     var identifier: String = ""
@@ -61,20 +66,16 @@ class FillJarController: UIViewController {
         let shortAnswerNibCell = UINib(nibName: ShortAnswerCollectionViewCellId, bundle: nil)
         QuestionListCollectionView.register(shortAnswerNibCell, forCellWithReuseIdentifier: ShortAnswerCollectionViewCellId)
         
+        let longAnswerNibCell = UINib(nibName: LongAnswerCollectionViewCellId, bundle: nil)
+        QuestionListCollectionView.register(longAnswerNibCell, forCellWithReuseIdentifier: LongAnswerCollectionViewCellId)
+        
         let multipleChoiceNibCell = UINib(nibName: MultipleChoiceCollectionViewCellId, bundle: nil)
         QuestionListCollectionView.register(multipleChoiceNibCell, forCellWithReuseIdentifier: MultipleChoiceCollectionViewCellId)
         
         let numberAnswerNibCell = UINib(nibName: NumberAnswerCollectionViewCellId, bundle: nil)
         QuestionListCollectionView.register(numberAnswerNibCell, forCellWithReuseIdentifier: NumberAnswerCollectionViewCellId)
         
-        /*
-        for i in 0...19{
-            self.questionDataList.append(jarData(jarTitle: "title", jarDescription: "description", jarCreator: "Dave", jarNumQuestions: "0/20", jarMoneyAmt: "$ 10.50"))
-        }
-        */
-        print("before get questions")
         getQuestions()
-        print("after get questions")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -112,6 +113,9 @@ class FillJarController: UIViewController {
                     }else if ((question["questionType"] as! String)=="numberanswer"){
                         self.questionDataList.append(numberAnswerData(questionField: (question["questionField"] as! String)))
                         self.questionTypes.append("numberanswer")
+                    }else if ((question["questionType"] as! String)=="longanswer"){
+                        self.questionDataList.append(longAnswerData(questionField: (question["questionField"] as! String)))
+                        self.questionTypes.append("longanswer")
                     }
                 }
                 self.QuestionListCollectionView.reloadData()
@@ -133,11 +137,19 @@ extension FillJarController: UICollectionViewDelegate, UICollectionViewDataSourc
             print("yes short answer")
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShortAnswerCollectionViewCellId, for: indexPath) as! ShortAnswerCollectionViewCell
             cell.questionField.text = String(indexPath.item + 1) + ". " + (questionDataList[indexPath.item] as! shortAnswerData).questionField
+            cell.questionField.frame = CGRect(x: cell.questionField.frame.origin.x, y: cell.questionField.frame.origin.y, width: cell.questionField.frame.width, height: cell.questionField.optimalHeight)
+            return cell
+        }else if(self.questionTypes[indexPath.item] == "longanswer"){
+            print("yes long answer")
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LongAnswerCollectionViewCellId, for: indexPath) as! LongAnswerCollectionViewCell
+            cell.questionField.text = String(indexPath.item + 1) + ". " + (questionDataList[indexPath.item] as! longAnswerData).questionField
+            cell.questionField.frame = CGRect(x: cell.questionField.frame.origin.x, y: cell.questionField.frame.origin.y, width: cell.questionField.frame.width, height: cell.questionField.optimalHeight)
             return cell
         }else if (self.questionTypes[indexPath.item] == "multiplechoice"){
             print("yes multiple choice")
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MultipleChoiceCollectionViewCellId, for: indexPath) as! MultipleChoiceCollectionViewCell
             cell.questionField.text = String(indexPath.item + 1) + ". " + (questionDataList[indexPath.item] as! multipleChoiceData).questionField
+            cell.questionField.frame = CGRect(x: cell.questionField.frame.origin.x, y: cell.questionField.frame.origin.y, width: cell.questionField.frame.width, height: cell.questionField.optimalHeight)
             for i in 0...((questionDataList[indexPath.item] as! multipleChoiceData).options.count - 1){
                 //print((questionDataList[indexPath.item] as! multipleChoiceData).options[i])
                 cell.addButton(field: (questionDataList[indexPath.item] as! multipleChoiceData).options[i])
@@ -169,15 +181,24 @@ extension FillJarController: UICollectionViewDelegate, UICollectionViewDataSourc
         print("cell dimensions")
         //print(indexPath.)
         if(questionTypes[indexPath.item]=="shortanswer"){
-            return CGSize.init(width: UIScreen.main.bounds.width - 30, height: 66)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShortAnswerCollectionViewCellId, for: indexPath) as! ShortAnswerCollectionViewCell
+            cell.questionField.text = String(indexPath.item + 1) + ". " + (questionDataList[indexPath.item] as! shortAnswerData).questionField
+            let optimalHeight = cell.questionField.optimalHeight
+            return CGSize.init(width: UIScreen.main.bounds.width - 20, height: 72+(optimalHeight-26.5))
         }else if(questionTypes[indexPath.item]=="multiplechoice"){
             print("entering multiple choice dimensions")
-            let _height = 30 + ((questionDataList[indexPath.item] as! multipleChoiceData).options.count * 45)
-            return CGSize.init(width: Int(UIScreen.main.bounds.width - 30), height: _height)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MultipleChoiceCollectionViewCellId, for: indexPath) as! MultipleChoiceCollectionViewCell
+            cell.questionField.text = String(indexPath.item + 1) + ". " + (questionDataList[indexPath.item] as! multipleChoiceData).questionField
+            let optimalHeight = cell.questionField.optimalHeight
+            let _height = optimalHeight + 8.0 + CGFloat((questionDataList[indexPath.item] as! multipleChoiceData).options.count * 45)
+            return CGSize.init(width: UIScreen.main.bounds.width - 20, height: _height)
         }else if(questionTypes[indexPath.item]=="numberanswer"){
             return CGSize.init(width: UIScreen.main.bounds.width - 30, height: 100)
         }else if(questionTypes[indexPath.item]=="longanswer"){
-            return CGSize.init(width: UIScreen.main.bounds.width - 30, height: 86)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LongAnswerCollectionViewCellId, for: indexPath) as! LongAnswerCollectionViewCell
+            cell.questionField.text = String(indexPath.item + 1) + ". " + (questionDataList[indexPath.item] as! longAnswerData).questionField
+            let optimalHeight = cell.questionField.optimalHeight
+            return CGSize.init(width: UIScreen.main.bounds.width - 20, height: 121+(optimalHeight-26.5))
         }
         print("successful")
         return CGSize.init(width: 0, height: 0)
