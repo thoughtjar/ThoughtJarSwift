@@ -15,10 +15,11 @@ class JarCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var jarCreator: UILabel!
     @IBOutlet weak var jarNumQuestions: UILabel!
     @IBOutlet weak var jarMoneyAmt: UILabel!
+    @IBOutlet weak var jarBorder: UIImageView!
+    @IBOutlet weak var darkAuthorIcon: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
 }

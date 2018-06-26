@@ -19,10 +19,15 @@ struct multipleChoiceData {
     let options : [String]!
 }
 
+struct numberAnswerData {
+    let questionField : String!
+}
+
 class FillJarController: UIViewController {
 
     let QuestionCollectionViewCellId: String = "JarCollectionViewCell"
     let ShortAnswerCollectionViewCellId: String = "ShortAnswerCollectionViewCell"
+    let NumberAnswerCollectionViewCellId: String = "NumberAnswerCollectionViewCell"
     let MultipleChoiceCollectionViewCellId: String = "MultipleChoiceCollectionViewCell"
     var identifier: String = ""
     var questionTypes = [String]()
@@ -59,6 +64,9 @@ class FillJarController: UIViewController {
         let multipleChoiceNibCell = UINib(nibName: MultipleChoiceCollectionViewCellId, bundle: nil)
         QuestionListCollectionView.register(multipleChoiceNibCell, forCellWithReuseIdentifier: MultipleChoiceCollectionViewCellId)
         
+        let numberAnswerNibCell = UINib(nibName: NumberAnswerCollectionViewCellId, bundle: nil)
+        QuestionListCollectionView.register(numberAnswerNibCell, forCellWithReuseIdentifier: NumberAnswerCollectionViewCellId)
+        
         /*
         for i in 0...19{
             self.questionDataList.append(jarData(jarTitle: "title", jarDescription: "description", jarCreator: "Dave", jarNumQuestions: "0/20", jarMoneyAmt: "$ 10.50"))
@@ -92,13 +100,18 @@ class FillJarController: UIViewController {
                 for i in 0...(questions.count-1){
                     let question = questions[i] as! NSDictionary
                     //print(jar["title"] as! String)
+                    print(question["questionType"] as! String)
                     if((question["questionType"] as! String)=="shortanswer"){
                         self.questionDataList.append(shortAnswerData(questionField: (question["questionField"] as! String)))
+                        print(shortAnswerData(questionField: (question["questionField"] as! String)))
                         self.questionTypes.append("shortanswer")
                     }else if ((question["questionType"] as! String)=="multiplechoice"){
                         let mcOptions = question["answerOptions"] as! [String]
                         self.questionDataList.append(multipleChoiceData(questionField: (question["questionField"] as! String), options: mcOptions))
                         self.questionTypes.append("multiplechoice")
+                    }else if ((question["questionType"] as! String)=="numberanswer"){
+                        self.questionDataList.append(numberAnswerData(questionField: (question["questionField"] as! String)))
+                        self.questionTypes.append("numberanswer")
                     }
                 }
                 self.QuestionListCollectionView.reloadData()
@@ -117,6 +130,7 @@ extension FillJarController: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if (self.questionTypes[indexPath.item] == "shortanswer"){
+            print("yes short answer")
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShortAnswerCollectionViewCellId, for: indexPath) as! ShortAnswerCollectionViewCell
             cell.questionField.text = String(indexPath.item + 1) + ". " + (questionDataList[indexPath.item] as! shortAnswerData).questionField
             return cell
@@ -128,7 +142,11 @@ extension FillJarController: UICollectionViewDelegate, UICollectionViewDataSourc
                 //print((questionDataList[indexPath.item] as! multipleChoiceData).options[i])
                 cell.addButton(field: (questionDataList[indexPath.item] as! multipleChoiceData).options[i])
             }
-            print("just about to return multiple choic cell")
+            return cell
+        }else if (self.questionTypes[indexPath.item] == "numberanswer"){
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NumberAnswerCollectionViewCellId, for: indexPath) as! NumberAnswerCollectionViewCell
+            print("aaaaaa" + (questionDataList[indexPath.item] as! numberAnswerData).questionField)
+            cell.questionField.text = String(indexPath.item + 1) + ". " + (questionDataList[indexPath.item] as! numberAnswerData).questionField
             return cell
         }
         return UICollectionViewCell()
@@ -154,7 +172,10 @@ extension FillJarController: UICollectionViewDelegate, UICollectionViewDataSourc
             return CGSize.init(width: UIScreen.main.bounds.width - 30, height: 56)
         }else if(questionTypes[indexPath.item]=="multiplechoice"){
             print("entering multiple choice dimensions")
-            return CGSize.init(width: UIScreen.main.bounds.width - 30, height: 200)
+            let _height = 30 + ((questionDataList[indexPath.item] as! multipleChoiceData).options.count * 35)
+            return CGSize.init(width: Int(UIScreen.main.bounds.width - 30), height: _height)
+        }else if(questionTypes[indexPath.item]=="numberanswer"){
+            return CGSize.init(width: UIScreen.main.bounds.width - 30, height: 100)
         }
         print("successful")
         return CGSize.init(width: 0, height: 0)

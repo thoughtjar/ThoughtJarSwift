@@ -11,6 +11,8 @@
 		7923914220E193E9004F37F5 /* ShortAnswerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7923914020E193E9004F37F5 /* ShortAnswerCollectionViewCell.xib */; };
 		7923914520E1A939004F37F5 /* MultipleChoiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7923914320E1A938004F37F5 /* MultipleChoiceCollectionViewCell.swift */; };
 		7923914620E1A939004F37F5 /* MultipleChoiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7923914420E1A938004F37F5 /* MultipleChoiceCollectionViewCell.xib */; };
+		7923914920E1BC7C004F37F5 /* NumberAnswerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7923914720E1BC7C004F37F5 /* NumberAnswerCollectionViewCell.swift */; };
+		7923914A20E1BC7C004F37F5 /* NumberAnswerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7923914820E1BC7C004F37F5 /* NumberAnswerCollectionViewCell.xib */; };
 		7941BA4420DB75A6001A3DA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941BA4320DB75A6001A3DA9 /* AppDelegate.swift */; };
 		7941BA4620DB75A6001A3DA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941BA4520DB75A6001A3DA9 /* ViewController.swift */; };
 		7941BA4920DB75A6001A3DA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA4720DB75A6001A3DA9 /* Main.storyboard */; };
@@ -85,6 +87,8 @@
 		7923914020E193E9004F37F5 /* ShortAnswerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShortAnswerCollectionViewCell.xib; sourceTree = "<group>"; };
 		7923914320E1A938004F37F5 /* MultipleChoiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceCollectionViewCell.swift; sourceTree = "<group>"; };
 		7923914420E1A938004F37F5 /* MultipleChoiceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultipleChoiceCollectionViewCell.xib; sourceTree = "<group>"; };
+		7923914720E1BC7C004F37F5 /* NumberAnswerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberAnswerCollectionViewCell.swift; sourceTree = "<group>"; };
+		7923914820E1BC7C004F37F5 /* NumberAnswerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberAnswerCollectionViewCell.xib; sourceTree = "<group>"; };
 		7941BA4020DB75A6001A3DA9 /* ThoughtJar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThoughtJar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7941BA4320DB75A6001A3DA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7941BA4520DB75A6001A3DA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -262,6 +266,8 @@
 				7923914020E193E9004F37F5 /* ShortAnswerCollectionViewCell.xib */,
 				7923914320E1A938004F37F5 /* MultipleChoiceCollectionViewCell.swift */,
 				7923914420E1A938004F37F5 /* MultipleChoiceCollectionViewCell.xib */,
+				7923914720E1BC7C004F37F5 /* NumberAnswerCollectionViewCell.swift */,
+				7923914820E1BC7C004F37F5 /* NumberAnswerCollectionViewCell.xib */,
 			);
 			path = JarCells;
 			sourceTree = "<group>";
@@ -396,6 +402,7 @@
 				7941BAB520DC1235001A3DA9 /* NHaasGroteskDSPro-96BlkIt.ttf in Resources */,
 				7941BA4920DB75A6001A3DA9 /* Main.storyboard in Resources */,
 				7941BAB320DC1231001A3DA9 /* NHaasGroteskDSPro-76BdIt.ttf in Resources */,
+				7923914A20E1BC7C004F37F5 /* NumberAnswerCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +447,6 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ThoughtJar/Pods-ThoughtJar-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/BubbleTransition/BubbleTransition.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -449,7 +455,6 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BubbleTransition.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
@@ -508,6 +513,7 @@
 				7941BA4620DB75A6001A3DA9 /* ViewController.swift in Sources */,
 				79E44E0820DC455D006DF5CF /* JarCollectionViewCell.swift in Sources */,
 				7923914520E1A939004F37F5 /* MultipleChoiceCollectionViewCell.swift in Sources */,
+				7923914920E1BC7C004F37F5 /* NumberAnswerCollectionViewCell.swift in Sources */,
 				795DE67A20DD78F000F8BE88 /* FillJarController.swift in Sources */,
 				7923914120E193E9004F37F5 /* ShortAnswerCollectionViewCell.swift in Sources */,
 				7941BA4420DB75A6001A3DA9 /* AppDelegate.swift in Sources */,

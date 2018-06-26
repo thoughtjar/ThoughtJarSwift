@@ -151,4 +151,33 @@ extension JarListController: UICollectionViewDelegate, UICollectionViewDataSourc
         performSegue(withIdentifier: "showJar", sender: nil)
     }
     
+
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        UIView.animate(withDuration: 0.3) {
+            if let cell = collectionView.cellForItem(at: indexPath) as? JarCollectionViewCell {
+                cell.jarTitle.alpha = CGFloat(0.4)
+                cell.jarDescription.alpha = CGFloat(0.4)
+                cell.jarCreator.alpha = CGFloat(0.4)
+                cell.jarNumQuestions.alpha = CGFloat(0.4)
+                cell.jarMoneyAmt.alpha = CGFloat(0.4)
+                cell.jarBorder.alpha = CGFloat(0.4)
+                cell.darkAuthorIcon.alpha = CGFloat(0.4)
+            }
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        UIView.animate(withDuration: 0.3) {
+            if let cell = collectionView.cellForItem(at: indexPath) as? JarCollectionViewCell {
+                cell.jarTitle.alpha = CGFloat(1)
+                cell.jarDescription.alpha = CGFloat(1)
+                cell.jarCreator.alpha = CGFloat(1)
+                cell.jarNumQuestions.alpha = CGFloat(1)
+                cell.jarMoneyAmt.alpha = CGFloat(1)
+                cell.jarBorder.alpha = CGFloat(1)
+                cell.darkAuthorIcon.alpha = CGFloat(1)
+            }
+        }
+    }
+    
 }

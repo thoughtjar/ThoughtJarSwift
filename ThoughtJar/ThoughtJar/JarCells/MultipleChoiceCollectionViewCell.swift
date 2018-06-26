@@ -22,7 +22,7 @@ class MultipleChoiceCollectionViewCell: UICollectionViewCell {
 
     func addButton(field:String){
         //print("multiplechoicecell: "+field)
-        let button = UIButton(frame: CGRect(x: 8, y: 20+(30*buttonCount), width: 330, height: 30))
+        let button = UIButton(frame: CGRect(x: 8, y: 30+(35*buttonCount), width: 330, height: 30))
         button.backgroundColor = UIColor( red: 0.9, green: 0.9, blue:0.9, alpha: 1.0 )
         button.layer.cornerRadius = 10
         button.setTitle(field, for: .normal)
@@ -31,19 +31,19 @@ class MultipleChoiceCollectionViewCell: UICollectionViewCell {
         button.layer.borderColor = UIColor( red: 0.58, green: 0.62, blue: 0.72, alpha:1.0).cgColor
         button.layer.borderWidth = 3
         button.setTitleColor(UIColor( red: 0.58, green: 0.62, blue: 0.72, alpha:1.0), for: .normal)
+        button.contentHorizontalAlignment = .left
+        button.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0)
         button.layer.masksToBounds = true;
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         button.tag = buttonList.count
         buttonList.append(button)
+        buttonCount += 1
         /*
         for i in 0...(buttonList.count-1){
             print(buttonList[i].titleLabel?.text)
         }
         */
-        if(buttonList.count == 1){
-            print(button.titleLabel?.text)
-            self.addSubview(button)
-        }
+        self.addSubview(button)
     }
     
     @objc func buttonAction(sender: UIButton!) {
@@ -57,5 +57,6 @@ class MultipleChoiceCollectionViewCell: UICollectionViewCell {
             revertedButton.layer.borderColor = UIColor( red: 0.58, green: 0.62, blue: 0.72, alpha:1.0).cgColor
             revertedButton.setTitleColor(UIColor( red: 0.58, green: 0.62, blue: 0.72, alpha:1.0), for: .normal)
         }
+        selectedButtonTag = sender.tag
     }
 }

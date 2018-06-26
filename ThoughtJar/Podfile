@@ -8,6 +8,5 @@ target 'ThoughtJar' do
 pod 'Firebase/Auth'
 pod 'GoogleSignIn'
 pod 'Alamofire', '~> 4.7'
-pod 'BubbleTransition'
 
 end

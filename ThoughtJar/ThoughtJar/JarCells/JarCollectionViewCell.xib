@@ -61,7 +61,7 @@
                                 <color key="textColor" red="0.074730642139999998" green="0.14123401050000001" blue="0.2907136977" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AuthorIcon" translatesAutoresizingMaskIntoConstraints="NO" id="JQZ-zp-aQ3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkAuthorIcon" translatesAutoresizingMaskIntoConstraints="NO" id="JQZ-zp-aQ3">
                                 <rect key="frame" x="8" y="74" width="18" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -91,6 +91,8 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="352" height="112"/>
             <connections>
+                <outlet property="darkAuthorIcon" destination="JQZ-zp-aQ3" id="Nsy-hg-wQe"/>
+                <outlet property="jarBorder" destination="WSe-uI-vBJ" id="cgL-sz-JHu"/>
                 <outlet property="jarCreator" destination="7C8-6V-aE4" id="yp8-ha-UYz"/>
                 <outlet property="jarDescription" destination="ehk-Pm-bo3" id="lG1-1E-vH9"/>
                 <outlet property="jarMoneyAmt" destination="1fU-Fl-S2E" id="OP1-WB-PcF"/>
@@ -101,7 +103,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="AuthorIcon" width="12" height="28"/>
+        <image name="DarkAuthorIcon" width="12" height="28"/>
         <image name="DarkJarBorder" width="682" height="198"/>
     </resources>
 </document>
