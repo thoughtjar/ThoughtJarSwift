@@ -48,14 +48,18 @@ class MultipleChoiceCollectionViewCell: UICollectionViewCell {
     
     @objc func buttonAction(sender: UIButton!) {
         print("Button tapped")
-        sender.backgroundColor = UIColor( red: 0, green: 0.68, blue: 0.12, alpha:1.0)
-        sender.layer.borderColor = UIColor( red: 0, green: 0.68, blue: 0.12, alpha:1.0).cgColor
-        sender.setTitleColor(UIColor.white, for: .normal)
+        UIView.animate(withDuration: 0.3){
+            sender.backgroundColor = UIColor( red: 0, green: 0.68, blue: 0.12, alpha:1.0)
+            sender.layer.borderColor = UIColor( red: 0, green: 0.68, blue: 0.12, alpha:1.0).cgColor
+            sender.setTitleColor(UIColor.white, for: .normal)
+        }
         if(selectedButtonTag != -1){
             let revertedButton:UIButton = buttonList[selectedButtonTag]
-            revertedButton.backgroundColor = UIColor( red: 0.9, green: 0.9, blue:0.9, alpha: 1.0 )
-            revertedButton.layer.borderColor = UIColor( red: 0.58, green: 0.62, blue: 0.72, alpha:1.0).cgColor
-            revertedButton.setTitleColor(UIColor( red: 0.58, green: 0.62, blue: 0.72, alpha:1.0), for: .normal)
+            UIView.animate(withDuration: 0.3){
+                revertedButton.backgroundColor = UIColor( red: 0.9, green: 0.9, blue:0.9, alpha: 1.0 )
+                revertedButton.layer.borderColor = UIColor( red: 0.58, green: 0.62, blue: 0.72, alpha:1.0).cgColor
+                revertedButton.setTitleColor(UIColor( red: 0.58, green: 0.62, blue: 0.72, alpha:1.0), for: .normal)
+            }
         }
         selectedButtonTag = sender.tag
     }
