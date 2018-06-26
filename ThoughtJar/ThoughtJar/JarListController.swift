@@ -17,7 +17,7 @@ struct jarData {
     let jarMoneyAmt: String!
 }
 
-class JarListController: UIViewController, UIViewControllerTransitioningDelegate {
+class JarListController: UIViewController  {
 
     let JarCollectionViewCellId: String = "JarCollectionViewCell"
     @IBOutlet weak var JarListCollectionView: UICollectionView!
@@ -26,7 +26,8 @@ class JarListController: UIViewController, UIViewControllerTransitioningDelegate
     
     var jarDataList = [jarData]()
     var refresher:UIRefreshControl!
-    
+    var jarIdentifiers = [String]()
+    var clickedCellIdentifer: String = ""
     //let transition = BubbleTransition()
     
     @IBAction func openProfile(_ sender: UIButton) {
@@ -44,6 +45,14 @@ class JarListController: UIViewController, UIViewControllerTransitioningDelegate
         let when = DispatchTime.now() + 0.6 // change to desired number of seconds
         DispatchQueue.main.asyncAfter(deadline: when) {
             self.refresher.endRefreshing()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showJar" {
+            if let destinationVC = segue.destination as? FillJarController {
+                destinationVC.identifier = self.clickedCellIdentifer
+            }
         }
     }
     
@@ -78,11 +87,12 @@ class JarListController: UIViewController, UIViewControllerTransitioningDelegate
                     let jar = jars[i] as! NSDictionary
                     //print(jar["title"] as! String)
                     self.jarDataList.append(jarData(jarTitle: (jar["title"] as! String), jarDescription: jar["description"] as! String, jarCreator: "Dave", jarNumQuestions: "0/20", jarMoneyAmt: "$ 10.50"))
+                    self.jarIdentifiers.append(jar["identifier"] as! String)
                 }
                 self.JarListCollectionView.reloadData()
             }
         }
-
+        print(self.jarIdentifiers)
         print("in jar list controller")
     }
     
@@ -136,6 +146,8 @@ extension JarListController: UICollectionViewDelegate, UICollectionViewDataSourc
         transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
         view.window!.layer.add(transition, forKey: kCATransition)
         */
+        //get cell identifer
+        self.clickedCellIdentifer = self.jarIdentifiers[indexPath.item]
         performSegue(withIdentifier: "showJar", sender: nil)
     }
     
