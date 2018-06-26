@@ -268,12 +268,12 @@
 				79E44E0720DC455D006DF5CF /* JarCollectionViewCell.xib */,
 				7923913F20E193E9004F37F5 /* ShortAnswerCollectionViewCell.swift */,
 				7923914020E193E9004F37F5 /* ShortAnswerCollectionViewCell.xib */,
+				79C8D99420E2B9C70076C7B6 /* LongAnswerCollectionViewCell.swift */,
+				79C8D99520E2B9C70076C7B6 /* LongAnswerCollectionViewCell.xib */,
 				7923914320E1A938004F37F5 /* MultipleChoiceCollectionViewCell.swift */,
 				7923914420E1A938004F37F5 /* MultipleChoiceCollectionViewCell.xib */,
 				7923914720E1BC7C004F37F5 /* NumberAnswerCollectionViewCell.swift */,
 				7923914820E1BC7C004F37F5 /* NumberAnswerCollectionViewCell.xib */,
-				79C8D99420E2B9C70076C7B6 /* LongAnswerCollectionViewCell.swift */,
-				79C8D99520E2B9C70076C7B6 /* LongAnswerCollectionViewCell.xib */,
 			);
 			path = JarCells;
 			sourceTree = "<group>";

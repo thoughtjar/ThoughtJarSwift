@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ShortAnswerCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
+class ShortAnswerCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
 
     @IBOutlet weak var questionField: UILabel!
     
-    @IBOutlet weak var response: UITextView!
+    @IBOutlet weak var response: UITextField!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,20 +28,14 @@ class ShortAnswerCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         response.layer.borderWidth = 5
         response.backgroundColor = UIColor( red: 0.9, green: 0.9, blue:0.9, alpha: 1.0 )
         response.textColor = UIColor( red: 0.58, green: 0.62, blue:0.72, alpha: 1.0 )
-        let insets = UIEdgeInsetsMake(8, 8, 8, 8)
-        response.textContainerInset = insets
+        let _frame:CGRect = CGRect(x:0, y:0, width:8, height:response.frame.size.height)
+        let paddingView = UIView(frame: _frame)
+        response.leftView = paddingView
+        response.leftViewMode = UITextFieldViewMode.always
         response.layer.masksToBounds = true
     }
-
-    func textViewDidEndEditing(_ textView: UITextView) {
-        UIView.animate(withDuration: 0.15) {
-            self.response.backgroundColor = UIColor( red: 0, green: 0.68, blue: 0.12, alpha:1.0)
-            self.response.layer.borderColor = UIColor( red: 0, green: 0.68, blue:0.12, alpha: 1.0 ).cgColor
-            self.response.textColor = UIColor.white
-        }
-    }
     
-    func textViewDidBeginEditing(_ textView: UITextView) {
+    @IBAction func revertColor(_ sender: Any) {
         UIView.animate(withDuration: 0.15){
             self.response.backgroundColor = UIColor( red: 0.9, green: 0.9, blue:0.9, alpha: 1.0 )
             self.response.layer.borderColor = UIColor( red: 0.58, green: 0.62, blue: 0.72, alpha:1.0).cgColor
@@ -48,11 +43,17 @@ class ShortAnswerCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         }
     }
     
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if(text == "\n") {
-            textView.resignFirstResponder()
-            return false
+    @IBAction func fillColor(_ sender: Any) {
+        UIView.animate(withDuration: 0.15) {
+            self.response.backgroundColor = UIColor( red: 0, green: 0.68, blue: 0.12, alpha:1.0)
+            self.response.layer.borderColor = UIColor( red: 0, green: 0.68, blue:0.12, alpha: 1.0 ).cgColor
+            self.response.textColor = UIColor.white
         }
-        return true
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.endEditing(true)
+        return false
     }
 }
