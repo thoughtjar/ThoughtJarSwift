@@ -21,10 +21,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ShortAnswerCollectionViewCell" customModule="ThoughtJar" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="348" height="56"/>
+            <rect key="frame" x="0.0" y="0.0" width="348" height="86"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="348" height="56"/>
+                <rect key="frame" x="0.0" y="0.0" width="348" height="86"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question Field" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="De5-WR-bDX">
@@ -34,24 +34,21 @@
                         <color key="textColor" red="0.066666666669999999" green="0.13725490200000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Answer Here." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jdH-TE-b8O">
-                        <rect key="frame" x="8" y="26" width="330" height="30"/>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8NW-Jl-DCl">
+                        <rect key="frame" x="8" y="26" width="330" height="60"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="textColor" red="0.066666666669999999" green="0.13725490200000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <fontDescription key="fontDescription" name="NHaasGroteskDSPro-55Rg" family="Neue Haas Grotesk Display Pro" pointSize="15"/>
-                        <textInputTraits key="textInputTraits"/>
-                        <connections>
-                            <action selector="fillColor:" destination="gTV-IL-0wX" eventType="editingDidEnd" id="Cul-pS-cHk"/>
-                            <action selector="revertColor:" destination="gTV-IL-0wX" eventType="editingDidBegin" id="vnE-2c-mqf"/>
-                        </connections>
-                    </textField>
+                        <fontDescription key="fontDescription" name="NHaasGroteskDSPro-55Rg" family="Neue Haas Grotesk Display Pro" pointSize="16"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="348" height="56"/>
             <connections>
                 <outlet property="questionField" destination="De5-WR-bDX" id="LOP-Nn-eGg"/>
-                <outlet property="response" destination="jdH-TE-b8O" id="I8F-Bm-ggv"/>
+                <outlet property="response" destination="8NW-Jl-DCl" id="tlb-vJ-Qhg"/>
             </connections>
             <point key="canvasLocation" x="34" y="68"/>
         </collectionViewCell>

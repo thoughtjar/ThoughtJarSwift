@@ -169,10 +169,10 @@ extension FillJarController: UICollectionViewDelegate, UICollectionViewDataSourc
         print("cell dimensions")
         //print(indexPath.)
         if(questionTypes[indexPath.item]=="shortanswer"){
-            return CGSize.init(width: UIScreen.main.bounds.width - 30, height: 56)
+            return CGSize.init(width: UIScreen.main.bounds.width - 30, height: 86)
         }else if(questionTypes[indexPath.item]=="multiplechoice"){
             print("entering multiple choice dimensions")
-            let _height = 30 + ((questionDataList[indexPath.item] as! multipleChoiceData).options.count * 35)
+            let _height = 30 + ((questionDataList[indexPath.item] as! multipleChoiceData).options.count * 45)
             return CGSize.init(width: Int(UIScreen.main.bounds.width - 30), height: _height)
         }else if(questionTypes[indexPath.item]=="numberanswer"){
             return CGSize.init(width: UIScreen.main.bounds.width - 30, height: 100)

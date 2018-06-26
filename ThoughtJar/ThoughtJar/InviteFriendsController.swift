@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InviteFriendsController: UIViewController {
+class InviteFriendsController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var shareType: UISegmentedControl!
     @IBOutlet weak var shareField: UITextField!
@@ -22,6 +22,7 @@ class InviteFriendsController: UIViewController {
         self.styleShareField()
         
         // Do any additional setup after loading the view.
+        shareField.delegate = self
     }
     
     
@@ -51,4 +52,8 @@ class InviteFriendsController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
 }
