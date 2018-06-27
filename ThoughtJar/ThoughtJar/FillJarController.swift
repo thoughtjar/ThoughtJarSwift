@@ -27,6 +27,9 @@ struct numberAnswerData {
     let questionField : String!
 }
 
+struct submitButtonData {
+}
+
 class FillJarController: UIViewController {
 
     let QuestionCollectionViewCellId: String = "JarCollectionViewCell"
@@ -34,6 +37,7 @@ class FillJarController: UIViewController {
     let LongAnswerCollectionViewCellId: String = "LongAnswerCollectionViewCell"
     let NumberAnswerCollectionViewCellId: String = "NumberAnswerCollectionViewCell"
     let MultipleChoiceCollectionViewCellId: String = "MultipleChoiceCollectionViewCell"
+    let SubmitButtonCollectionViewCellId: String = "SubmitButtonCollectionViewCell"
     var identifier: String = ""
     var questionTypes = [String]()
     
@@ -74,6 +78,9 @@ class FillJarController: UIViewController {
         
         let numberAnswerNibCell = UINib(nibName: NumberAnswerCollectionViewCellId, bundle: nil)
         QuestionListCollectionView.register(numberAnswerNibCell, forCellWithReuseIdentifier: NumberAnswerCollectionViewCellId)
+        
+        let submitButtonNibCell = UINib(nibName: SubmitButtonCollectionViewCellId, bundle: nil)
+        QuestionListCollectionView.register(submitButtonNibCell, forCellWithReuseIdentifier: SubmitButtonCollectionViewCellId)
         
         getQuestions()
     }
@@ -118,6 +125,8 @@ class FillJarController: UIViewController {
                         self.questionTypes.append("longanswer")
                     }
                 }
+                self.questionDataList.append(submitButtonData())
+                self.questionTypes.append("submitbutton")
                 self.QuestionListCollectionView.reloadData()
             }
         }
@@ -159,6 +168,10 @@ extension FillJarController: UICollectionViewDelegate, UICollectionViewDataSourc
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NumberAnswerCollectionViewCellId, for: indexPath) as! NumberAnswerCollectionViewCell
             print("aaaaaa" + (questionDataList[indexPath.item] as! numberAnswerData).questionField)
             cell.questionField.text = String(indexPath.item + 1) + ". " + (questionDataList[indexPath.item] as! numberAnswerData).questionField
+            cell.questionField.frame = CGRect(x: cell.questionField.frame.origin.x, y: cell.questionField.frame.origin.y, width: cell.questionField.frame.width, height: cell.questionField.optimalHeight)
+            return cell
+        }else if(self.questionTypes[indexPath.item] == "submitbutton"){
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SubmitButtonCollectionViewCellId, for: indexPath) as! SubmitButtonCollectionViewCell
             return cell
         }
         return UICollectionViewCell()
@@ -193,17 +206,60 @@ extension FillJarController: UICollectionViewDelegate, UICollectionViewDataSourc
             let _height = optimalHeight + 8.0 + CGFloat((questionDataList[indexPath.item] as! multipleChoiceData).options.count * 45)
             return CGSize.init(width: UIScreen.main.bounds.width - 20, height: _height)
         }else if(questionTypes[indexPath.item]=="numberanswer"){
-            return CGSize.init(width: UIScreen.main.bounds.width - 30, height: 100)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NumberAnswerCollectionViewCellId, for: indexPath) as! NumberAnswerCollectionViewCell
+            cell.questionField.text = String(indexPath.item + 1) + ". " + (questionDataList[indexPath.item] as! numberAnswerData).questionField
+            let optimalHeight = cell.questionField.optimalHeight
+            return CGSize.init(width: UIScreen.main.bounds.width - 30, height: 96+(optimalHeight-26.5))
         }else if(questionTypes[indexPath.item]=="longanswer"){
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LongAnswerCollectionViewCellId, for: indexPath) as! LongAnswerCollectionViewCell
             cell.questionField.text = String(indexPath.item + 1) + ". " + (questionDataList[indexPath.item] as! longAnswerData).questionField
             let optimalHeight = cell.questionField.optimalHeight
             return CGSize.init(width: UIScreen.main.bounds.width - 20, height: 121+(optimalHeight-26.5))
+        }else if(questionTypes[indexPath.item]=="submitbutton"){
+            return CGSize.init(width: 130.0, height: 41.0)
         }
         print("successful")
         return CGSize.init(width: 0, height: 0)
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("clicked some cell")
+        if(questionTypes[indexPath.item]=="submitbutton"){
+            var responseData: [String:String] = [:]
+            print("you clicked the submit button")
+            for i in 0...(questionTypes.count-1){
+                /*
+                print("unooooooo")
+                var index:IndexPath = IndexPath(item: i, section: 1)
+                print("dosssssss")
+                print(index.item)
+                */
+                if(questionTypes[i]=="shortanswer"){
+                    let cell = collectionView.cellForItem(at: IndexPath(item: i, section: 0)) as! ShortAnswerCollectionViewCell
+                    responseData["Question"+String(i+1)] = cell.response.text
+                }else if(questionTypes[i]=="longanswer"){
+                    let cell = collectionView.cellForItem(at: IndexPath(item: i, section: 0)) as! LongAnswerCollectionViewCell
+                    responseData["Question"+String(i+1)] = cell.response.text
+                }else if(questionTypes[i]=="multiplechoice"){
+                    let cell = collectionView.cellForItem(at: IndexPath(item: i, section: 0)) as! MultipleChoiceCollectionViewCell
+                    responseData["Question"+String(i+1)] = (questionDataList[i] as! multipleChoiceData).options[cell.selectedButtonTag]
+                }else if(questionTypes[i]=="numberanswer"){
+                    let cell = collectionView.cellForItem(at: IndexPath(item: i, section: 0)) as! NumberAnswerCollectionViewCell
+                    responseData["Question"+String(i+1)] = cell.value.text
+                }
+            }
+            let parameters: Parameters = ["access-token": UserDefaults.standard.string(forKey: "access-token"),
+                                          "response": responseData]
+            let url = "https://api.thoughtjar.net/respond"
+            Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON{ response in
+                if let result = response.result.value {
+                    print(result)
+                }
+            }
+        }
+    }
+ 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let scrollDiff = scrollView.contentOffset.y - self.previousScrollOffset
         

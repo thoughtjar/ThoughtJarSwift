@@ -27,7 +27,7 @@ class LongAnswerCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         response.layer.borderWidth = 5
         response.backgroundColor = UIColor( red: 0.9, green: 0.9, blue:0.9, alpha: 1.0 )
         response.textColor = UIColor( red: 0.58, green: 0.62, blue:0.72, alpha: 1.0 )
-        let insets = UIEdgeInsetsMake(8, 8, 8, 8)
+        let insets = UIEdgeInsetsMake(8, 7, 8, 8)
         response.textContainerInset = insets
         response.layer.masksToBounds = true
     }

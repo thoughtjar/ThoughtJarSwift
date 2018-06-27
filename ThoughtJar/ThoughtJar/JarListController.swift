@@ -40,9 +40,9 @@ class JarListController: UIViewController  {
         
         print("refresh")
         //self.collectionView?.reloadData()
-        
+        getJars()
         //refreshControl?.endRefreshing()
-        let when = DispatchTime.now() + 0.6 // change to desired number of seconds
+        let when = DispatchTime.now() + 1.0 // change to desired number of seconds
         DispatchQueue.main.asyncAfter(deadline: when) {
             self.refresher.endRefreshing()
         }
@@ -66,11 +66,17 @@ class JarListController: UIViewController  {
         JarListCollectionView.register(nibCell, forCellWithReuseIdentifier: JarCollectionViewCellId)
         
         self.refresher = UIRefreshControl()
-        self.refresher.tintColor = UIColor(red: 255, green: 255, blue:255, alpha:1.0)
+        self.refresher.tintColor = UIColor(red: 0.07, green: 0.14, blue:0.30, alpha:1.0)
         self.refresher.addTarget(self, action: #selector(refreshStream(_:)), for: .valueChanged)
         JarListCollectionView.refreshControl = self.refresher
         
         
+        getJars()
+        print(self.jarIdentifiers)
+        print("in jar list controller")
+    }
+    
+    func getJars(){
         let parameters: Parameters = ["access-token": UserDefaults.standard.string(forKey: "access-token")]
         let url = "https://api.thoughtjar.net/fillJars"
         //let url = "http://localhost:5000/fillJars"
@@ -92,10 +98,7 @@ class JarListController: UIViewController  {
                 self.JarListCollectionView.reloadData()
             }
         }
-        print(self.jarIdentifiers)
-        print("in jar list controller")
     }
-    
 
 }
 

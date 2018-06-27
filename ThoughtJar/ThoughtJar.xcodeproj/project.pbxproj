@@ -58,6 +58,8 @@
 		79B40BED20E0BEAC001224F5 /* InviteFriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B40BEC20E0BEAC001224F5 /* InviteFriendsController.swift */; };
 		79C8D99620E2B9C70076C7B6 /* LongAnswerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C8D99420E2B9C70076C7B6 /* LongAnswerCollectionViewCell.swift */; };
 		79C8D99720E2B9C70076C7B6 /* LongAnswerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C8D99520E2B9C70076C7B6 /* LongAnswerCollectionViewCell.xib */; };
+		79C8D99A20E2ED630076C7B6 /* SubmitButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C8D99820E2ED630076C7B6 /* SubmitButtonCollectionViewCell.swift */; };
+		79C8D99B20E2ED630076C7B6 /* SubmitButtonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C8D99920E2ED630076C7B6 /* SubmitButtonCollectionViewCell.xib */; };
 		79DE3C7120DF73DB005D3A33 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79DE3C7020DF73DB005D3A33 /* Alamofire.framework */; };
 		79E44E0420DC43CC006DF5CF /* JarListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44E0320DC43CC006DF5CF /* JarListController.swift */; };
 		79E44E0820DC455D006DF5CF /* JarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44E0620DC455D006DF5CF /* JarCollectionViewCell.swift */; };
@@ -126,6 +128,8 @@
 		79B40BEC20E0BEAC001224F5 /* InviteFriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendsController.swift; sourceTree = "<group>"; };
 		79C8D99420E2B9C70076C7B6 /* LongAnswerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongAnswerCollectionViewCell.swift; sourceTree = "<group>"; };
 		79C8D99520E2B9C70076C7B6 /* LongAnswerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LongAnswerCollectionViewCell.xib; sourceTree = "<group>"; };
+		79C8D99820E2ED630076C7B6 /* SubmitButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButtonCollectionViewCell.swift; sourceTree = "<group>"; };
+		79C8D99920E2ED630076C7B6 /* SubmitButtonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubmitButtonCollectionViewCell.xib; sourceTree = "<group>"; };
 		79DE3C7020DF73DB005D3A33 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E44E0320DC43CC006DF5CF /* JarListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarListController.swift; sourceTree = "<group>"; };
 		79E44E0620DC455D006DF5CF /* JarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -274,6 +278,8 @@
 				7923914420E1A938004F37F5 /* MultipleChoiceCollectionViewCell.xib */,
 				7923914720E1BC7C004F37F5 /* NumberAnswerCollectionViewCell.swift */,
 				7923914820E1BC7C004F37F5 /* NumberAnswerCollectionViewCell.xib */,
+				79C8D99820E2ED630076C7B6 /* SubmitButtonCollectionViewCell.swift */,
+				79C8D99920E2ED630076C7B6 /* SubmitButtonCollectionViewCell.xib */,
 			);
 			path = JarCells;
 			sourceTree = "<group>";
@@ -401,6 +407,7 @@
 				7941BAAA20DC121B001A3DA9 /* NHaasGroteskDSPro-35XLt.ttf in Resources */,
 				7941BA7220DB85F8001A3DA9 /* GoogleService-Info.plist in Resources */,
 				7941BAAD20DC1222001A3DA9 /* NHaasGroteskDSPro-46LtIt.ttf in Resources */,
+				79C8D99B20E2ED630076C7B6 /* SubmitButtonCollectionViewCell.xib in Resources */,
 				7941BAAC20DC1220001A3DA9 /* NHaasGroteskDSPro-45Lt.ttf in Resources */,
 				7941BAAF20DC1227001A3DA9 /* NHaasGroteskDSPro-56It.ttf in Resources */,
 				7941BA4B20DB75A8001A3DA9 /* Assets.xcassets in Resources */,
@@ -517,6 +524,7 @@
 			files = (
 				79E44E0420DC43CC006DF5CF /* JarListController.swift in Sources */,
 				79B40BED20E0BEAC001224F5 /* InviteFriendsController.swift in Sources */,
+				79C8D99A20E2ED630076C7B6 /* SubmitButtonCollectionViewCell.swift in Sources */,
 				7941BA4620DB75A6001A3DA9 /* ViewController.swift in Sources */,
 				79E44E0820DC455D006DF5CF /* JarCollectionViewCell.swift in Sources */,
 				79C8D99620E2B9C70076C7B6 /* LongAnswerCollectionViewCell.swift in Sources */,
