@@ -300,6 +300,14 @@
                                 <fontDescription key="fontDescription" name="NHaasGroteskDSPro-45Lt" family="Neue Haas Grotesk Display Pro" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpx-Wl-TEO">
+                                <rect key="frame" x="118" y="587" width="141" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NHaasGroteskDSPro-65Md" family="Neue Haas Grotesk Display Pro" pointSize="18"/>
+                                <state key="normal" title="Submit" backgroundImage="SubmitButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="FpD-SJ-5zL"/>
@@ -456,6 +464,7 @@
         <image name="DarkProfileIcon" width="48" height="48"/>
         <image name="FilledJar" width="170" height="198"/>
         <image name="GradientBackground" width="750" height="1334"/>
+        <image name="SubmitButton" width="234" height="82"/>
         <image name="White logo" width="2917" height="730"/>
         <image name="WithdrawButton" width="682" height="82"/>
     </resources>
