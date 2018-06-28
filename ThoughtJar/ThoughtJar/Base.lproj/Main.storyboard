@@ -292,13 +292,19 @@
                                     <segment title="Text"/>
                                 </segments>
                                 <color key="tintColor" red="0.066666666669999999" green="0.13725490200000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="shareTypeChanged:" destination="7hH-sk-uF2" eventType="valueChanged" id="UMm-By-FOB"/>
+                                </connections>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cfg-tZ-Crd">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="youremail@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cfg-tZ-Crd">
                                 <rect key="frame" x="17" y="363" width="342" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.066666666669999999" green="0.13725490200000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="NHaasGroteskDSPro-45Lt" family="Neue Haas Grotesk Display Pro" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="formatNumber:" destination="7hH-sk-uF2" eventType="editingChanged" id="kuX-hc-Qxh"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpx-Wl-TEO">
                                 <rect key="frame" x="118" y="587" width="141" height="46"/>
@@ -307,6 +313,9 @@
                                 <state key="normal" title="Submit" backgroundImage="SubmitButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitShare:" destination="7hH-sk-uF2" eventType="touchUpInside" id="xtm-M4-Str"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

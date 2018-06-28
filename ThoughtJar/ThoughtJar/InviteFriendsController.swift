@@ -56,4 +56,51 @@ class InviteFriendsController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         return false
     }
+    
+    private func formattedNumber(number: String) -> String {
+        var cleanPhoneNumber = number.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        var mask = "+X (XXX) XXX - XXXX"
+        
+        var result = ""
+        var index = cleanPhoneNumber.startIndex
+        for ch in mask.characters {
+            if index == cleanPhoneNumber.endIndex {
+                break
+            }
+            if ch == "X" {
+                result.append(cleanPhoneNumber[index])
+                index = cleanPhoneNumber.index(after: index)
+            } else {
+                result.append(ch)
+            }
+        }
+        return result
+    }
+    
+    @IBAction func formatNumber(_ sender: Any) {
+        print("value of text field is changing")
+        if(shareType.selectedSegmentIndex==1){
+            print("on text")
+            shareField.text = formattedNumber(number: shareField.text!)
+        }
+    }
+    
+    @IBAction func shareTypeChanged(_ sender: Any) {
+        //handle segmented ui controller value change
+        shareField.text = ""
+        if(shareType.selectedSegmentIndex==0){
+            shareField.placeholder = "youremail@gmail.com"
+            shareField.keyboardType = UIKeyboardType.emailAddress
+        }else if(shareType.selectedSegmentIndex==1){
+            shareField.placeholder = "+1 (408) 123 - 4567"
+            shareField.keyboardType = UIKeyboardType.numberPad
+        }
+    }
+    
+    
+    @IBAction func submitShare(_ sender: UIButton) {
+        //handle press submit button here
+        print("pressed submit share button")
+    }
+    
 }
