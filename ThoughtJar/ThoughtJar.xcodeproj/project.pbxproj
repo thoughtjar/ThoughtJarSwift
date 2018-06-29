@@ -55,6 +55,8 @@
 		795DE6A620DF6D3A00F8BE88 /* NHaasGroteskDSPro-76BdIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA9D20DC1208001A3DA9 /* NHaasGroteskDSPro-76BdIt.ttf */; };
 		795DE6A720DF6D3A00F8BE88 /* NHaasGroteskDSPro-95Blk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BAA120DC1209001A3DA9 /* NHaasGroteskDSPro-95Blk.ttf */; };
 		795DE6A820DF6D3A00F8BE88 /* NHaasGroteskDSPro-96BlkIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BAA420DC120A001A3DA9 /* NHaasGroteskDSPro-96BlkIt.ttf */; };
+		79A70FBB20E5C76900CA77EC /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A70FBA20E5C76900CA77EC /* LoginController.swift */; };
+		79A70FBD20E5C7A500CA77EC /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A70FBC20E5C7A500CA77EC /* SignupController.swift */; };
 		79B40BED20E0BEAC001224F5 /* InviteFriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B40BEC20E0BEAC001224F5 /* InviteFriendsController.swift */; };
 		79C8D99620E2B9C70076C7B6 /* LongAnswerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C8D99420E2B9C70076C7B6 /* LongAnswerCollectionViewCell.swift */; };
 		79C8D99720E2B9C70076C7B6 /* LongAnswerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C8D99520E2B9C70076C7B6 /* LongAnswerCollectionViewCell.xib */; };
@@ -125,6 +127,8 @@
 		7941BAA520DC120B001A3DA9 /* NHaasGroteskDSPro-75Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-75Bd.ttf"; sourceTree = "<group>"; };
 		795DE67920DD78F000F8BE88 /* FillJarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillJarController.swift; sourceTree = "<group>"; };
 		795DE68620DD9D7400F8BE88 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		79A70FBA20E5C76900CA77EC /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		79A70FBC20E5C7A500CA77EC /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
 		79B40BEC20E0BEAC001224F5 /* InviteFriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendsController.swift; sourceTree = "<group>"; };
 		79C8D99420E2B9C70076C7B6 /* LongAnswerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongAnswerCollectionViewCell.swift; sourceTree = "<group>"; };
 		79C8D99520E2B9C70076C7B6 /* LongAnswerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LongAnswerCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -216,6 +220,8 @@
 				79E44E0320DC43CC006DF5CF /* JarListController.swift */,
 				795DE68620DD9D7400F8BE88 /* ProfileController.swift */,
 				795DE67920DD78F000F8BE88 /* FillJarController.swift */,
+				79A70FBC20E5C7A500CA77EC /* SignupController.swift */,
+				79A70FBA20E5C76900CA77EC /* LoginController.swift */,
 				7941BA4A20DB75A8001A3DA9 /* Assets.xcassets */,
 				7941BA4C20DB75A8001A3DA9 /* LaunchScreen.storyboard */,
 				7941BA4F20DB75A8001A3DA9 /* Info.plist */,
@@ -349,6 +355,9 @@
 		7941BA3820DB75A6001A3DA9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					0,
+				);
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Thought Jar";
@@ -525,11 +534,13 @@
 				79E44E0420DC43CC006DF5CF /* JarListController.swift in Sources */,
 				79B40BED20E0BEAC001224F5 /* InviteFriendsController.swift in Sources */,
 				79C8D99A20E2ED630076C7B6 /* SubmitButtonCollectionViewCell.swift in Sources */,
+				79A70FBB20E5C76900CA77EC /* LoginController.swift in Sources */,
 				7941BA4620DB75A6001A3DA9 /* ViewController.swift in Sources */,
 				79E44E0820DC455D006DF5CF /* JarCollectionViewCell.swift in Sources */,
 				79C8D99620E2B9C70076C7B6 /* LongAnswerCollectionViewCell.swift in Sources */,
 				7923914520E1A939004F37F5 /* MultipleChoiceCollectionViewCell.swift in Sources */,
 				7923914920E1BC7C004F37F5 /* NumberAnswerCollectionViewCell.swift in Sources */,
+				79A70FBD20E5C7A500CA77EC /* SignupController.swift in Sources */,
 				795DE67A20DD78F000F8BE88 /* FillJarController.swift in Sources */,
 				7923914120E193E9004F37F5 /* ShortAnswerCollectionViewCell.swift in Sources */,
 				7941BA4420DB75A6001A3DA9 /* AppDelegate.swift in Sources */,

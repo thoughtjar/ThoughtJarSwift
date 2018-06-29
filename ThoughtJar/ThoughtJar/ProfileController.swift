@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import GoogleSignIn
+//import GoogleSignIn
 
-class ProfileController: UIViewController, GIDSignInUIDelegate {
+class ProfileController: UIViewController { //, GIDSignInUIDelegate {
 
     @IBOutlet weak var userName: UILabel!
     
@@ -20,15 +20,16 @@ class ProfileController: UIViewController, GIDSignInUIDelegate {
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
         
         print("entering profile controller")
-        userName.text = (UserDefaults.standard.string(forKey: "name"))!
+        userName.text = (UserDefaults.standard.string(forKey: "fName"))! + " " + (UserDefaults.standard.string(forKey: "lName"))!
     }
     
     @IBAction func logOut(_ sender: UIButton) {
         print("logging out")
-        UserDefaults.standard.removeObject(forKey: "name")
-        UserDefaults.standard.removeObject(forKey: "email")
+        UserDefaults.standard.removeObject(forKey: "fName")
+        UserDefaults.standard.removeObject(forKey: "lName")
+        UserDefaults.standard.removeObject(forKey: "phone")
         UserDefaults.standard.removeObject(forKey: "access-token")
-        GIDSignIn.sharedInstance()?.signOut()
+        //GIDSignIn.sharedInstance()?.signOut()
         
         //let vc = self.storyboard?.instantiateViewController(withIdentifier: "login") as! ViewController
         //self.present(vc, animated: true, completion: nil)
