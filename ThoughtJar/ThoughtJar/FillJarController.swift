@@ -59,6 +59,8 @@ class FillJarController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        self.hideKeyboardWhenTappedAround()
         print("identifier= "+self.identifier as! String)
         self.initialLeftBorder = jarTitleLeftConstraint.constant
         self.length = (UIScreen.main.bounds.width/2.0)-(self.jarTitle.intrinsicContentSize.width/4.0)-self.initialLeftBorder

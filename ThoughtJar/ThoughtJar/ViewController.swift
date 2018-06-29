@@ -28,6 +28,7 @@ class ViewController: UIViewController, UITextFieldDelegate {//}, GIDSignInUIDel
         phoneNumberField.keyboardType = UIKeyboardType.numberPad
         self.hideKeyboardWhenTappedAround()
         self.phoneNumberField.delegate = self
+        self.phoneNumberField.autocorrectionType = .no
         /*
         print(UserDefaults.standard.string(forKey: "name")==nil)
         let googleLoginButton = GIDSignInButton()

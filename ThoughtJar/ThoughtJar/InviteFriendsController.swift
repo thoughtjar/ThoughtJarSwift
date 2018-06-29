@@ -16,6 +16,7 @@ class InviteFriendsController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hideKeyboardWhenTappedAround()
         //styling uisegmented controller
         self.styleShareType()
         //styling sharefield text
