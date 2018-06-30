@@ -7,11 +7,13 @@
 //
 
 import UIKit
-//import GoogleSignIn
+import Alamofire
 
 class ProfileController: UIViewController { //, GIDSignInUIDelegate {
 
     @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var numJarsFilled: UILabel!
+    @IBOutlet weak var currentBalance: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,26 @@ class ProfileController: UIViewController { //, GIDSignInUIDelegate {
         
         print("entering profile controller")
         userName.text = (UserDefaults.standard.string(forKey: "fName"))! + " " + (UserDefaults.standard.string(forKey: "lName"))!
+        
+        getUserInfo()
+    }
+    
+    func getUserInfo(){
+        print(UserDefaults.standard.string(forKey: "access-token")!)
+        let parameters: Parameters = ["access-token": UserDefaults.standard.string(forKey: "access-token")!]
+        let url = "https://api.thoughtjar.net/profile"
+        print("attempt to get user info")
+        Alamofire.request(url, method: .post, parameters: parameters).responseJSON {response in
+            if let result = response.result.value {
+                print(result)
+                let JSON = result as! NSDictionary
+                print(JSON["balance"]!)
+                print(JSON["jarsFilled"])
+                self.numJarsFilled.text = "x" + String(JSON["jarsFilled"] as! Int)
+                self.currentBalance.text = "$" + String(JSON["balance"] as! Double)
+                
+            }
+        }
     }
     
     @IBAction func logOut(_ sender: UIButton) {

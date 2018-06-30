@@ -416,6 +416,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="nNB-5g-VNQ"/>
                     <connections>
+                        <outlet property="currentBalance" destination="aUK-gG-x59" id="OAw-qS-9Fy"/>
+                        <outlet property="numJarsFilled" destination="dSR-oV-Rle" id="MV3-HB-eGo"/>
                         <outlet property="userName" destination="ooD-gs-mRR" id="cmg-8O-EDL"/>
                         <segue destination="7hH-sk-uF2" kind="show" identifier="showInviteFriends" id="PXW-kJ-H4Y"/>
                     </connections>

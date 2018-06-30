@@ -85,9 +85,7 @@ class JarListController: UIViewController  {
                 
                 let JSON = (result as! NSDictionary)
                 let jars = JSON["jars"] as! NSArray
-                print(jars[0])
-                //print(inJSON[0])
-                //print((JSON["jars"])[0])
+                print(jars)
                 for i in 0...(jars.count-1){
                     let jar = jars[i] as! NSDictionary
                     //print(jar["title"] as! String)
