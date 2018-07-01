@@ -196,7 +196,10 @@ extension FillJarController: UICollectionViewDelegate, UICollectionViewDataSourc
         print("cell dimensions")
         //print(indexPath.)
         if(questionTypes[indexPath.item]=="shortanswer"){
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShortAnswerCollectionViewCellId, for: indexPath) as! ShortAnswerCollectionViewCell
+            print("shortanswerrrrrr")
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier:
+                ShortAnswerCollectionViewCellId, for: indexPath) as! ShortAnswerCollectionViewCell
+            print("lshorrrrrttasdnafea")
             cell.questionField.text = String(indexPath.item + 1) + ". " + (questionDataList[indexPath.item] as! shortAnswerData).questionField
             let optimalHeight = cell.questionField.optimalHeight
             return CGSize.init(width: UIScreen.main.bounds.width - 20, height: 72+(optimalHeight-26.5))
