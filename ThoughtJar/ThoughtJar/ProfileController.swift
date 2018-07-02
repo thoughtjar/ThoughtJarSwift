@@ -39,7 +39,7 @@ class ProfileController: UIViewController { //, GIDSignInUIDelegate {
                 print(JSON["balance"]!)
                 print(JSON["jarsFilled"])
                 self.numJarsFilled.text = "x" + String(JSON["jarsFilled"] as! Int)
-                self.currentBalance.text = "$" + String(JSON["balance"] as! Double)
+                self.currentBalance.text = "$" + String(JSON["balance"] as! String)
                 
             }
         }
