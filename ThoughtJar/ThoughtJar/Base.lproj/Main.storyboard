@@ -367,14 +367,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x17" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSR-oV-Rle">
-                                <rect key="frame" x="285" y="207" width="73" height="60"/>
+                                <rect key="frame" x="159" y="207" width="199" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NHaasGroteskDSPro-65Md" family="Neue Haas Grotesk Display Pro" pointSize="50"/>
                                 <color key="textColor" red="0.066666666669999999" green="0.13725490200000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$14.50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUK-gG-x59">
-                                <rect key="frame" x="206" y="366" width="152" height="60"/>
+                                <rect key="frame" x="159" y="366" width="199" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NHaasGroteskDSPro-65Md" family="Neue Haas Grotesk Display Pro" pointSize="50"/>
                                 <color key="textColor" red="1" green="0.54509803921568623" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

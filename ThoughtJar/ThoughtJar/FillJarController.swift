@@ -255,7 +255,8 @@ extension FillJarController: UICollectionViewDelegate, UICollectionViewDataSourc
                 }
             }
             let parameters: Parameters = ["access-token": UserDefaults.standard.string(forKey: "access-token"),
-                                          "response": responseData]
+                                          "response": responseData,
+                                          "surveyId": self.identifier]
             let url = "https://api.thoughtjar.net/respond"
             Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON{ response in
                 if let result = response.result.value {
