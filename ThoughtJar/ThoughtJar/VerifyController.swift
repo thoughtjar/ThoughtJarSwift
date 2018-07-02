@@ -25,6 +25,8 @@ class VerifyController: UIViewController, UITextFieldDelegate {
         print("in verify controller")
         print(self.signUpData)
         
+        verMessage.text = "We are sending a verification code to the following number: " + formattedNumber(number: self.signUpData["phone"]!)
+        
         //style text fields
         styleTextField(textField: self.verCodeOne)
         styleTextField(textField: self.verCodeTwo)
@@ -48,6 +50,29 @@ class VerifyController: UIViewController, UITextFieldDelegate {
         self.verCodeFour.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControlEvents.editingChanged)
         
         requestTextMessage()
+        
+        self.verCodeOne.becomeFirstResponder()
+    }
+    
+    private func formattedNumber(number: String) -> String {
+        var cleanPhoneNumber = number.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        //var mask = "+X (XXX) XXX - XXXX"
+        var mask = "(XXX) XXX - XXXX"
+        
+        var result = ""
+        var index = cleanPhoneNumber.startIndex
+        for ch in mask.characters {
+            if index == cleanPhoneNumber.endIndex {
+                break
+            }
+            if ch == "X" {
+                result.append(cleanPhoneNumber[index])
+                index = cleanPhoneNumber.index(after: index)
+            } else {
+                result.append(ch)
+            }
+        }
+        return result
     }
     
     func styleTextField(textField:UITextField) {

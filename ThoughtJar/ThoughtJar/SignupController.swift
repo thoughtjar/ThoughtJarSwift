@@ -140,6 +140,7 @@ class SignupController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func signUpWithCredentials(_ sender: UIButton) {
+        NotificationCenter.default.removeObserver(self)
         var unformattedNumber = ""
         let validNumbers:[String] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
         for (index, char) in (self.phoneNumberField.text?.enumerated())! {
@@ -181,6 +182,7 @@ class SignupController: UIViewController, UITextFieldDelegate {
             self.performSegue(withIdentifier: "showVerify", sender: nil)
         }
         */
+        print("showing verify controller")
         self.performSegue(withIdentifier: "showVerify", sender: nil)
     }
 }

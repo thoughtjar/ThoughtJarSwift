@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class InviteFriendsController: UIViewController, UITextFieldDelegate {
 
@@ -60,7 +61,7 @@ class InviteFriendsController: UIViewController, UITextFieldDelegate {
     
     private func formattedNumber(number: String) -> String {
         var cleanPhoneNumber = number.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
-        var mask = "+X (XXX) XXX - XXXX"
+        var mask = "(XXX) XXX - XXXX"
         
         var result = ""
         var index = cleanPhoneNumber.startIndex
@@ -93,7 +94,7 @@ class InviteFriendsController: UIViewController, UITextFieldDelegate {
             shareField.placeholder = "youremail@gmail.com"
             shareField.keyboardType = UIKeyboardType.emailAddress
         }else if(shareType.selectedSegmentIndex==1){
-            shareField.placeholder = "+1 (408) 123 - 4567"
+            shareField.placeholder = "(408) 123 - 4567"
             shareField.keyboardType = UIKeyboardType.numberPad
         }
     }
@@ -102,6 +103,28 @@ class InviteFriendsController: UIViewController, UITextFieldDelegate {
     @IBAction func submitShare(_ sender: UIButton) {
         //handle press submit button here
         print("pressed submit share button")
+        if(self.shareType.selectedSegmentIndex == 1){
+            var unformattedNumber = ""
+            let validNumbers:[String] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+            for (index, char) in (self.shareField.text?.enumerated())! {
+                print(char)
+                print(String(char))
+                if(validNumbers.contains(String(char))){
+                    print("this is a number")
+                    unformattedNumber = unformattedNumber + String(char)
+                }
+            }
+            let parameters: Parameters = ["phone": unformattedNumber,
+                                          "access-token": UserDefaults.standard.string(forKey: "access-token")!]
+            let url = "https://api.thoughtjar.net/inviteSMS"
+            Alamofire.request(url, method: .post, parameters: parameters).responseJSON {response in
+                if let result = response.result.value {
+                    print(result)
+                    //pass
+                }
+            }
+        }
+        
     }
     
 }
