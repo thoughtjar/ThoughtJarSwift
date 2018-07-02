@@ -12,6 +12,7 @@ import Alamofire
 class SignupController: UIViewController, UITextFieldDelegate {
 
     var phoneNumber:String = ""
+    var signUpFields: [String: String] = [:]
     
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
@@ -67,6 +68,14 @@ class SignupController: UIViewController, UITextFieldDelegate {
         self.lastNameField.addTarget(self, action: #selector(textFieldDidEndChange(_:)), for: UIControlEvents.editingDidEnd)
         self.passwordField.addTarget(self, action: #selector(textFieldDidEndChange(_:)), for: UIControlEvents.editingDidEnd)
         self.confirmPasswordField.addTarget(self, action: #selector(textFieldDidEndChange(_:)), for: UIControlEvents.editingDidEnd)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showVerify" {
+            if let destinationVC = segue.destination as? VerifyController {
+                destinationVC.signUpData = self.signUpFields
+            }
+        }
     }
     
     func styleTextField(textField:UITextField) {
@@ -146,6 +155,8 @@ class SignupController: UIViewController, UITextFieldDelegate {
                                       "password": self.passwordField.text!,
                                       "fName": self.firstNameField.text!,
                                       "lName": self.lastNameField.text!]
+        self.signUpFields = parameters as! [String: String]
+        /*
         let url = "https://api.thoughtjar.net/signUp"
         Alamofire.request(url, method: .post, parameters: parameters).responseJSON {response in
             print("authenticating")
@@ -157,6 +168,7 @@ class SignupController: UIViewController, UITextFieldDelegate {
                 UserDefaults.standard.set((JSON["fName"])!, forKey: "fName")
                 UserDefaults.standard.set((JSON["lName"])!, forKey: "lName")
             }
+            /*
             let transition = CATransition()
             transition.duration = 0.5
             transition.type = kCATransitionFade
@@ -165,6 +177,10 @@ class SignupController: UIViewController, UITextFieldDelegate {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "navController") as! UINavigationController
             self.present(vc, animated: false, completion: nil)
             self.navigationController?.popViewController(animated: true)
+            */
+            self.performSegue(withIdentifier: "showVerify", sender: nil)
         }
+        */
+        self.performSegue(withIdentifier: "showVerify", sender: nil)
     }
 }

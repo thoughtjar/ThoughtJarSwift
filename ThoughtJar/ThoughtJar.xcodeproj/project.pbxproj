@@ -55,6 +55,7 @@
 		795DE6A620DF6D3A00F8BE88 /* NHaasGroteskDSPro-76BdIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BA9D20DC1208001A3DA9 /* NHaasGroteskDSPro-76BdIt.ttf */; };
 		795DE6A720DF6D3A00F8BE88 /* NHaasGroteskDSPro-95Blk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BAA120DC1209001A3DA9 /* NHaasGroteskDSPro-95Blk.ttf */; };
 		795DE6A820DF6D3A00F8BE88 /* NHaasGroteskDSPro-96BlkIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941BAA420DC120A001A3DA9 /* NHaasGroteskDSPro-96BlkIt.ttf */; };
+		798519F020EAD12E008E0830 /* VerifyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798519EF20EAD12E008E0830 /* VerifyController.swift */; };
 		79A70FBB20E5C76900CA77EC /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A70FBA20E5C76900CA77EC /* LoginController.swift */; };
 		79A70FBD20E5C7A500CA77EC /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A70FBC20E5C7A500CA77EC /* SignupController.swift */; };
 		79B40BED20E0BEAC001224F5 /* InviteFriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B40BEC20E0BEAC001224F5 /* InviteFriendsController.swift */; };
@@ -127,6 +128,7 @@
 		7941BAA520DC120B001A3DA9 /* NHaasGroteskDSPro-75Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NHaasGroteskDSPro-75Bd.ttf"; sourceTree = "<group>"; };
 		795DE67920DD78F000F8BE88 /* FillJarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillJarController.swift; sourceTree = "<group>"; };
 		795DE68620DD9D7400F8BE88 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		798519EF20EAD12E008E0830 /* VerifyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyController.swift; sourceTree = "<group>"; };
 		79A70FBA20E5C76900CA77EC /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		79A70FBC20E5C7A500CA77EC /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
 		79B40BEC20E0BEAC001224F5 /* InviteFriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendsController.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				795DE68620DD9D7400F8BE88 /* ProfileController.swift */,
 				795DE67920DD78F000F8BE88 /* FillJarController.swift */,
 				79A70FBC20E5C7A500CA77EC /* SignupController.swift */,
+				798519EF20EAD12E008E0830 /* VerifyController.swift */,
 				79A70FBA20E5C76900CA77EC /* LoginController.swift */,
 				7941BA4A20DB75A8001A3DA9 /* Assets.xcassets */,
 				7941BA4C20DB75A8001A3DA9 /* LaunchScreen.storyboard */,
@@ -532,6 +535,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79E44E0420DC43CC006DF5CF /* JarListController.swift in Sources */,
+				798519F020EAD12E008E0830 /* VerifyController.swift in Sources */,
 				79B40BED20E0BEAC001224F5 /* InviteFriendsController.swift in Sources */,
 				79C8D99A20E2ED630076C7B6 /* SubmitButtonCollectionViewCell.swift in Sources */,
 				79A70FBB20E5C76900CA77EC /* LoginController.swift in Sources */,

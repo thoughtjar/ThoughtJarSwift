@@ -147,14 +147,6 @@
                                 <rect key="frame" x="95" y="58" width="184" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uI1-lQ-oeV">
-                                <rect key="frame" x="147" y="514" width="80" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="GoButton"/>
-                                <connections>
-                                    <action selector="signUpWithCredentials:" destination="aRs-w4-RRq" eventType="touchUpInside" id="DuW-IP-4F2"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayR-dp-Eod">
                                 <rect key="frame" x="40" y="131" width="294" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -162,6 +154,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uI1-lQ-oeV">
+                                <rect key="frame" x="139" y="514" width="97" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="NextButton"/>
+                                <connections>
+                                    <action selector="signUpWithCredentials:" destination="aRs-w4-RRq" eventType="touchUpInside" id="DuW-IP-4F2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -178,6 +178,7 @@
                         <outlet property="lastNameField" destination="kpq-vV-SUP" id="Q22-3d-uRy"/>
                         <outlet property="passwordField" destination="Qg1-NS-WwE" id="Phk-cu-igH"/>
                         <outlet property="phoneNumberField" destination="Y1Y-S3-OK1" id="Dcy-Tq-f5v"/>
+                        <segue destination="mLr-Zz-VpI" kind="show" identifier="showVerify" id="A0w-5I-t42"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMi-MA-YdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -527,7 +528,7 @@
                                         <rect key="frame" x="16" y="96" width="343" height="4"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="testing jar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaY-r5-wdX">
-                                        <rect key="frame" x="18" y="42" width="282" height="48"/>
+                                        <rect key="frame" x="18" y="43" width="282" height="47"/>
                                         <fontDescription key="fontDescription" name="NHaasGroteskDSPro-65Md" family="Neue Haas Grotesk Display Pro" pointSize="40"/>
                                         <color key="textColor" red="0.066666666669999999" green="0.13725490200000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -666,6 +667,93 @@
             </objects>
             <point key="canvasLocation" x="-839" y="827"/>
         </scene>
+        <!--Verify Controller-->
+        <scene sceneID="nYE-3M-ouJ">
+            <objects>
+                <viewController id="mLr-Zz-VpI" customClass="VerifyController" customModule="ThoughtJar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8WT-pH-OZ1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GradientBackground" translatesAutoresizingMaskIntoConstraints="NO" id="4HM-K1-aKp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="White logo" translatesAutoresizingMaskIntoConstraints="NO" id="AhT-pn-ayQ">
+                                <rect key="frame" x="95" y="58" width="184" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Verify." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="br8-EJ-qZ9">
+                                <rect key="frame" x="77" y="131" width="220" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NHaasGroteskDSPro-65Md" family="Neue Haas Grotesk Display Pro" pointSize="82"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We are sending a verification code to the following number: 408-242-2277" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRa-JP-ehk">
+                                <rect key="frame" x="16" y="237" width="343" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NHaasGroteskDSPro-55Rg" family="Neue Haas Grotesk Display Pro" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y83-Be-vUd">
+                                <rect key="frame" x="17" y="307" width="71" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.066666666669999999" green="0.13725490200000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="NHaasGroteskDSPro-55Rg" family="Neue Haas Grotesk Display Pro" pointSize="47"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ysx-6g-q9j">
+                                <rect key="frame" x="287" y="307" width="71" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.066666666669999999" green="0.13725490200000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="NHaasGroteskDSPro-55Rg" family="Neue Haas Grotesk Display Pro" pointSize="47"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfj-ss-59d">
+                                <rect key="frame" x="107" y="307" width="71" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.066666666669999999" green="0.13725490200000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="NHaasGroteskDSPro-55Rg" family="Neue Haas Grotesk Display Pro" pointSize="47"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Sp-5i-3XG">
+                                <rect key="frame" x="197" y="307" width="71" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.066666666669999999" green="0.13725490200000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="NHaasGroteskDSPro-55Rg" family="Neue Haas Grotesk Display Pro" pointSize="47"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v59-ip-09o">
+                                <rect key="frame" x="147" y="435" width="80" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="GoButton"/>
+                                <connections>
+                                    <action selector="uploadSignUpData:" destination="mLr-Zz-VpI" eventType="touchUpInside" id="e5T-Wv-eFL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4HM-K1-aKp" firstAttribute="leading" secondItem="h9T-C0-g9z" secondAttribute="leading" id="Ftp-n3-rhY"/>
+                            <constraint firstItem="4HM-K1-aKp" firstAttribute="bottom" secondItem="h9T-C0-g9z" secondAttribute="bottom" id="RTD-0l-wvS"/>
+                            <constraint firstItem="4HM-K1-aKp" firstAttribute="top" secondItem="8WT-pH-OZ1" secondAttribute="top" id="n0Q-HV-Hdy"/>
+                            <constraint firstItem="4HM-K1-aKp" firstAttribute="trailing" secondItem="h9T-C0-g9z" secondAttribute="trailing" id="zE0-HM-767"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h9T-C0-g9z"/>
+                    </view>
+                    <connections>
+                        <outlet property="verCodeFour" destination="ysx-6g-q9j" id="FKg-kh-000"/>
+                        <outlet property="verCodeOne" destination="y83-Be-vUd" id="XAm-Fj-vbe"/>
+                        <outlet property="verCodeThree" destination="1Sp-5i-3XG" id="3jN-qo-e4B"/>
+                        <outlet property="verCodeTwo" destination="pfj-ss-59d" id="7CM-wF-x6g"/>
+                        <outlet property="verMessage" destination="zRa-JP-ehk" id="UnR-5e-OrV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lic-4d-uyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1773.5999999999999" y="826.23688155922048"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Buck" width="170" height="114"/>
@@ -675,6 +763,7 @@
         <image name="GoButton" width="160" height="82"/>
         <image name="GradientBackground" width="750" height="1334"/>
         <image name="LoginSignupButton" width="302" height="82"/>
+        <image name="NextButton" width="194" height="82"/>
         <image name="SubmitButton" width="234" height="82"/>
         <image name="White logo" width="2917" height="730"/>
         <image name="WithdrawButton" width="682" height="82"/>

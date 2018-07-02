@@ -78,7 +78,8 @@ class ViewController: UIViewController, UITextFieldDelegate {//}, GIDSignInUIDel
     
     private func formattedNumber(number: String) -> String {
         var cleanPhoneNumber = number.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
-        var mask = "+X (XXX) XXX - XXXX"
+        //var mask = "+X (XXX) XXX - XXXX"
+        var mask = "(XXX) XXX - XXXX"
         
         var result = ""
         var index = cleanPhoneNumber.startIndex
