@@ -40,6 +40,8 @@ class JarListController: UIViewController  {
         
         print("refresh")
         //self.collectionView?.reloadData()
+        self.jarDataList = [jarData]()
+        self.jarIdentifiers = [String]()
         getJars()
         //refreshControl?.endRefreshing()
         let when = DispatchTime.now() + 1.0 // change to desired number of seconds

@@ -35,14 +35,6 @@ class ShortAnswerCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
         response.layer.masksToBounds = true
     }
     
-    @IBAction func revertColor(_ sender: Any) {
-        UIView.animate(withDuration: 0.15){
-            self.response.backgroundColor = UIColor( red: 0.9, green: 0.9, blue:0.9, alpha: 1.0 )
-            self.response.layer.borderColor = UIColor( red: 0.58, green: 0.62, blue: 0.72, alpha:1.0).cgColor
-            self.response.textColor = UIColor( red: 0.07, green: 0.14, blue:0.3, alpha: 1.0 )
-        }
-    }
-    
     @IBAction func fillColor(_ sender: Any) {
         UIView.animate(withDuration: 0.15) {
             self.response.backgroundColor = UIColor( red: 0, green: 0.68, blue: 0.12, alpha:1.0)
@@ -51,6 +43,33 @@ class ShortAnswerCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
         }
     }
     
+    @IBAction func revertColor(_ sender: Any) {
+        if(response.text == ""){
+            UIView.animate(withDuration: 0.15){
+                self.response.backgroundColor = UIColor( red: 0.9, green: 0.9, blue:0.9, alpha: 1.0 )
+                self.response.layer.borderColor = UIColor( red: 0.58, green: 0.62, blue: 0.72, alpha:1.0).cgColor
+                self.response.textColor = UIColor( red: 0.07, green: 0.14, blue:0.3, alpha: 1.0 )
+            }
+        }
+    }
+    
+/*
+    @IBAction func revertColor(_ sender: Any) {
+        UIView.animate(withDuration: 0.15){
+            self.response.backgroundColor = UIColor( red: 0.9, green: 0.9, blue:0.9, alpha: 1.0 )
+            self.response.layer.borderColor = UIColor( red: 0.58, green: 0.62, blue: 0.72, alpha:1.0).cgColor
+            self.response.textColor = UIColor( red: 0.07, green: 0.14, blue:0.3, alpha: 1.0 )
+        }
+    }
+
+    @IBAction func fillColor(_ sender: Any) {
+        UIView.animate(withDuration: 0.15) {
+            self.response.backgroundColor = UIColor( red: 0, green: 0.68, blue: 0.12, alpha:1.0)
+            self.response.layer.borderColor = UIColor( red: 0, green: 0.68, blue:0.12, alpha: 1.0 ).cgColor
+            self.response.textColor = UIColor.white
+        }
+    }
+*/
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.endEditing(true)
