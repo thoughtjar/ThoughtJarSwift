@@ -127,15 +127,15 @@ class VerifyController: UIViewController, UITextFieldDelegate {
                 UserDefaults.standard.set((JSON["phone"])!, forKey: "phone")
                 UserDefaults.standard.set((JSON["fName"])!, forKey: "fName")
                 UserDefaults.standard.set((JSON["lName"])!, forKey: "lName")
+                let transition = CATransition()
+                transition.duration = 0.5
+                transition.type = kCATransitionFade
+                transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
+                self.view.window!.layer.add(transition, forKey: kCATransition)
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "navController") as! UINavigationController
+                self.present(vc, animated: false, completion: nil)
+                self.navigationController?.popViewController(animated: true)
             }
-            let transition = CATransition()
-            transition.duration = 0.5
-            transition.type = kCATransitionFade
-            transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
-            self.view.window!.layer.add(transition, forKey: kCATransition)
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "navController") as! UINavigationController
-            self.present(vc, animated: false, completion: nil)
-            self.navigationController?.popViewController(animated: true)
         }
     }
     
